@@ -1,4 +1,4 @@
-import { TITLE_OF_WEB_APP } from "@/lib/constants";
+import { TITLE_OF_SITE } from "@/lib/constants";
 import { sectionItems } from "@/lib/site-config";
 import {
   Sidebar,
@@ -16,7 +16,7 @@ export function AppSidebar() {
     <Sidebar>
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>{TITLE_OF_WEB_APP}</SidebarGroupLabel>
+          <SidebarGroupLabel>{TITLE_OF_SITE}</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {sectionItems.map((item) => (

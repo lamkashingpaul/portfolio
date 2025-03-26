@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export const SiteHeader = () => {
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="bg-background/95 supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50 w-full border-b backdrop-blur">
       <div className="container-wrapper">
         <div className="container flex h-14 items-center gap-2 md:gap-4">
           <div className="ml-auto flex items-center gap-2 md:flex-1 md:justify-end">
@@ -20,6 +20,7 @@ export const SiteHeader = () => {
                   href={process.env.NEXT_PUBLIC_GITHUB_URL}
                   target="_blank"
                   rel="noreferrer"
+                  className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   <Icons.gitHub className="h-4 w-4" />
                   <span className="sr-only">GitHub</span>

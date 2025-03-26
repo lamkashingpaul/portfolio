@@ -3,27 +3,27 @@ import { Home, User, Code, Rocket, Mail } from "lucide-react";
 export const sectionItems = [
   {
     title: "Home",
-    url: "#",
+    url: "#home",
     icon: Home,
   },
   {
     title: "About",
-    url: "#",
+    url: "#about",
     icon: User,
   },
   {
     title: "Skills",
-    url: "#",
+    url: "#skills",
     icon: Code,
   },
   {
     title: "Projects",
-    url: "#",
+    url: "#projects",
     icon: Rocket,
   },
   {
     title: "Contact",
-    url: "#",
+    url: "#contact",
     icon: Mail,
   },
 ];
