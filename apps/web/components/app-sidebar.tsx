@@ -1,4 +1,5 @@
 import { TITLE_OF_WEB_APP } from "@/lib/constants";
+import { sectionItems } from "@/lib/site-config";
 import {
   Sidebar,
   SidebarContent,
@@ -9,35 +10,6 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@workspace/ui/components/sidebar";
-import { Home, User, Code, Rocket, Mail } from "lucide-react";
-
-const items = [
-  {
-    title: "Home",
-    url: "#",
-    icon: Home,
-  },
-  {
-    title: "About",
-    url: "#",
-    icon: User,
-  },
-  {
-    title: "Skills",
-    url: "#",
-    icon: Code,
-  },
-  {
-    title: "Projects",
-    url: "#",
-    icon: Rocket,
-  },
-  {
-    title: "Contact",
-    url: "#",
-    icon: Mail,
-  },
-];
 
 export function AppSidebar() {
   return (
@@ -47,7 +19,7 @@ export function AppSidebar() {
           <SidebarGroupLabel>{TITLE_OF_WEB_APP}</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
-              {items.map((item) => (
+              {sectionItems.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
                     <a href={item.url}>

@@ -1,12 +1,17 @@
-import { Button } from "@workspace/ui/components/button";
+import { AboutSection } from "@/components/about-section";
+import { ContactSection } from "@/components/contact-section";
+import { HomeSection } from "@/components/home-section";
+import { ProjectsSection } from "@/components/projects-section";
+import { SkillsSection } from "@/components/skills-section";
 
 export default function Page() {
   return (
-    <div className="flex items-center justify-center min-h-svh">
-      <div className="flex flex-col items-center justify-center gap-4">
-        <h1 className="text-2xl font-bold">Hello World</h1>
-        <Button size="sm">Button</Button>
-      </div>
-    </div>
+    <>
+      <HomeSection />
+      <AboutSection />
+      <SkillsSection />
+      <ProjectsSection />
+      <ContactSection />
+    </>
   );
 }
