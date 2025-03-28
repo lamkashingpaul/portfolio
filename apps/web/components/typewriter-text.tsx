@@ -10,7 +10,7 @@ interface TextTypingProps {
   typingTexts: string[];
 }
 
-export const TextTyping = (props: TextTypingProps) => {
+export const TypewriterText = (props: TextTypingProps) => {
   const { className, staticText, typingTexts } = props;
 
   const [text, setText] = useState("");

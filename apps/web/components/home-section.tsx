@@ -1,6 +1,36 @@
-import { DesktopAvatarCard } from "@/components/desktop-avatar-card";
+import { AvatarCard } from "@/components/avatar-card";
+import { Icons } from "@/components/icons";
 import { IntroductionCard } from "@/components/introduction-card";
+import { shuffleArray } from "@/lib/utils";
 import { cn } from "@workspace/ui/lib/utils";
+
+const SKILLS_ICONS = [
+  Icons.nextJs,
+  Icons.reactJs,
+  Icons.tailwindCss,
+  Icons.typeScript,
+  Icons.nodeJs,
+  Icons.expressJs,
+  Icons.postgreSql,
+  Icons.docker,
+  Icons.git,
+  Icons.jest,
+  Icons.python,
+  Icons.javaScript,
+  Icons.html5,
+  Icons.css,
+  Icons.nestJs,
+  Icons.terraform,
+  Icons.postman,
+  Icons.aws,
+  Icons.shadcnUi,
+  Icons.mySql,
+  Icons.reactQuery,
+  Icons.redux,
+  Icons.githubActions,
+  Icons.mui,
+  Icons.vite,
+];
 
 interface HomeSectionProps {
   className?: string;
@@ -8,18 +38,14 @@ interface HomeSectionProps {
 
 export const HomeSection = (props: HomeSectionProps) => {
   const { className } = props;
+
   return (
-    <section
-      className={cn(
-        "relative w-full overflow-hidden py-12 md:py-24 lg:py-32",
-        className,
-      )}
-    >
+    <section className={cn("", className)}>
       <div className="container-wrapper">
         <div className="container py-4">
           <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_500px]">
             <IntroductionCard />
-            <DesktopAvatarCard />
+            <AvatarCard icons={shuffleArray(SKILLS_ICONS)} />
           </div>
         </div>
       </div>

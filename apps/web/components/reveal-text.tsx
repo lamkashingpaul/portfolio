@@ -8,7 +8,7 @@ interface TextRevealProps {
   className?: string;
 }
 
-export const TextReveal = (props: TextRevealProps) => {
+export const RevealText = (props: TextRevealProps) => {
   const { children, className } = props;
 
   return (
