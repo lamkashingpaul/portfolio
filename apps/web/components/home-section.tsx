@@ -43,7 +43,7 @@ export const HomeSection = (props: HomeSectionProps) => {
     <section className={cn("", className)}>
       <div className="container-wrapper">
         <div className="container py-4">
-          <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_500px]">
+          <div className="grid gap-4 lg:grid-cols-[1fr_400px] lg:gap-6 xl:grid-cols-[1fr_500px]">
             <IntroductionCard />
             <AvatarCard icons={shuffleArray(SKILLS_ICONS)} />
           </div>

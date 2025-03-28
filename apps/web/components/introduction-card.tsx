@@ -14,14 +14,15 @@ export const IntroductionCard = (props: IntroductionCardProps) => {
   return (
     <div className={cn("flex flex-col justify-center gap-4", className)}>
       <div className="space-y-2">
-        <RevealText className="bg-primary">
+        <RevealText coverClassName="bg-primary">
           <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
             Hi, this is <span className="text-primary">Paul Lam</span>
           </h1>
         </RevealText>
 
-        <RevealText className="bg-primary">
+        <RevealText coverClassName="bg-primary">
           <TypewriterText
+            cursorClassName="text-primary"
             staticText="I'm a"
             typingTexts={[
               "Full Stack Developer",
@@ -31,14 +32,14 @@ export const IntroductionCard = (props: IntroductionCardProps) => {
           />
         </RevealText>
 
-        <RevealText className="bg-muted-foreground">
+        <RevealText coverClassName="bg-muted-foreground">
           <p className="text-muted-foreground max-w-[600px] text-xl md:text-2xl">
             Tech Enthusiast specializing in building exceptional digital
             experiences
           </p>
         </RevealText>
 
-        <RevealText className="bg-muted-foreground">
+        <RevealText coverClassName="bg-muted-foreground">
           <p className="text-muted-foreground max-w-[600px] pt-4">
             I design and develop intuitive web applications that enhance user
             experiences, and I genuinely love what I do. With over 2 years of

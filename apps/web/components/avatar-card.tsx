@@ -18,7 +18,7 @@ export const AvatarCard = (props: AvatarCardProps) => {
     <div className="flex flex-col items-center justify-center">
       <div
         className={
-          "border-primary flex aspect-square flex-col justify-center gap-y-0 space-y-4 overflow-hidden rounded-full border-4"
+          "border-primary flex aspect-square flex-col items-center justify-center overflow-hidden rounded-full border-4"
         }
         style={{ maxHeight: 64 * m }}
       >

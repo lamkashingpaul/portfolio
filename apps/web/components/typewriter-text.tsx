@@ -6,12 +6,13 @@ import { cn } from "@workspace/ui/lib/utils";
 
 interface TextTypingProps {
   className?: string;
+  cursorClassName?: string;
   staticText: string;
   typingTexts: string[];
 }
 
 export const TypewriterText = (props: TextTypingProps) => {
-  const { className, staticText, typingTexts } = props;
+  const { className, cursorClassName, staticText, typingTexts } = props;
 
   const [text, setText] = useState("");
   const [index, setIndex] = useState(0);
@@ -51,7 +52,10 @@ export const TypewriterText = (props: TextTypingProps) => {
   return (
     <h1 className={cn("text-2xl", className)}>
       {staticText} <span className="text-primary font-bold">{text}</span>
-      <motion.span animate={{ opacity: Number(isCursorVisible) }}>
+      <motion.span
+        animate={{ opacity: Number(isCursorVisible) }}
+        className={cn(cursorClassName)}
+      >
         |
       </motion.span>
     </h1>
