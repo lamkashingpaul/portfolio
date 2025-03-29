@@ -1,3 +1,4 @@
+import { ExperienceTabs } from "@/components/experience-tabs";
 import { PersonalInfoCard } from "@/components/personal-info-card";
 import { RevealText } from "@/components/reveal-text";
 import { WhoIAmCard } from "@/components/who-i-am-card";
@@ -22,9 +23,14 @@ export const AboutSection = (props: AboutSectionProps) => {
             </RevealText>
           </div>
           <Separator className="mb-4 xl:mb-6" />
-          <div className="grid grid-cols-1 gap-4">
-            <PersonalInfoCard />
-            <WhoIAmCard />
+
+          <div className="space-y-4 lg:space-y-6">
+            <div className="grid grid-cols-1 gap-4 lg:grid-cols-[400px_1fr] lg:gap-6">
+              <PersonalInfoCard />
+              <WhoIAmCard />
+            </div>
+
+            <ExperienceTabs />
           </div>
         </div>
       </div>

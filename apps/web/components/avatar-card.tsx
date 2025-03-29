@@ -7,18 +7,21 @@ interface AvatarCardProps {
 export const AvatarCard = (props: AvatarCardProps) => {
   const { icons } = props;
   const m = 5;
-  const n = Math.ceil(icons.length / m);
+  const r = icons.length % m;
+  const n = (icons.length - r) / m;
 
   const directions = ["left", "right"] as const;
-  const iconsGrid = Array.from({ length: m }, (_, i) =>
-    icons.slice(i * n, (i + 1) * n),
-  );
+  const iconsGrid = Array.from({ length: m }, (_, i) => {
+    const left = i * n + Math.min(r, i);
+    const right = (i + 1) * n + Math.min(r, i) + Number(i < r);
+    return icons.slice(left, right);
+  });
 
   return (
     <div className="flex flex-col items-center justify-center">
       <div
         className={
-          "border-primary flex aspect-square flex-col items-center justify-center overflow-hidden rounded-full border-4"
+          "border-primary shadow-primary flex aspect-square flex-col items-center justify-center overflow-hidden rounded-full border transition-shadow duration-200 hover:shadow-md"
         }
         style={{ maxHeight: 64 * m }}
       >

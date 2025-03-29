@@ -10,20 +10,20 @@ import { Lightbulb } from "lucide-react";
 
 export const WhoIAmCard = () => {
   return (
-    <Card className="gap-2 transition-shadow duration-200 hover:shadow-lg">
+    <Card className="gap-2 transition-shadow duration-200 hover:shadow-md">
       <CardHeader>
         <CardTitle className="flex flex-row items-end justify-start gap-2 overflow-hidden">
-          <Lightbulb />
-          Who I Am
+          <Lightbulb className="text-primary size-6 md:size-8" />
+          <div className="text-xl md:text-2xl">Who I Am</div>
         </CardTitle>
         <Separator />
       </CardHeader>
       <CardContent>
         <RevealTextGroup
-          className="space-y-4"
+          className="space-y-4 lg:space-y-6"
           coverClassName="bg-muted-foreground"
         >
-          <p className="text-muted-foreground text-sm">
+          <p className="text-muted-foreground">
             I am Paul Lam, a Junior Software Developer at Forex Forest Limited,
             where I focus on developing applications using Next.js and NestJS.
             My work enhances user access to critical trading data, and I design
@@ -31,7 +31,7 @@ export const WhoIAmCard = () => {
             solutions on AWS for high performance and reliability.
           </p>
 
-          <p className="text-muted-foreground text-sm">
+          <p className="text-muted-foreground">
             With a degree in Mathematics and Information Engineering from The
             Chinese University of Hong Kong, I bring strong analytical skills to
             my projects. As an AWS Certified Solutions Architect, I am committed
@@ -39,7 +39,7 @@ export const WhoIAmCard = () => {
             collaborative environments.
           </p>
 
-          <p className="text-muted-foreground text-sm">
+          <p className="text-muted-foreground">
             In my free time, I enjoy exploring new technologies and working on
             side projects that fuel my creativity. I&rsquo;m particularly
             focused on honing my coding skills in data structures and

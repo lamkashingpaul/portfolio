@@ -30,6 +30,7 @@ const SKILLS_ICONS = [
   Icons.githubActions,
   Icons.mui,
   Icons.vite,
+  Icons.turborepo,
 ];
 
 interface HomeSectionProps {
