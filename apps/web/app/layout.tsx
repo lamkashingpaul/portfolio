@@ -2,9 +2,9 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "@workspace/ui/globals.css";
 import { Providers } from "@/components/providers";
 import { Metadata } from "next";
-import { TITLE_OF_SITE, TITLE_TEMPLATE_OF_SITE } from "@/lib/constants";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { titleOfSite, titleTemplateOfSite } from "@/lib/site-config";
 
 const fontSans = Geist({
   subsets: ["latin"],
@@ -18,8 +18,8 @@ const fontMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: TITLE_OF_SITE,
-    template: TITLE_TEMPLATE_OF_SITE,
+    default: titleOfSite,
+    template: titleTemplateOfSite,
   },
 };
 

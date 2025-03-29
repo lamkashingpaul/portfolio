@@ -1,5 +1,6 @@
 import { OpenToWorkIndicator } from "@/components/open-to-work-indicator";
 import { RevealTextGroup } from "@/components/reveal-text-group";
+import { personalInfo } from "@/lib/site-config";
 import {
   Card,
   CardContent,
@@ -10,6 +11,8 @@ import { Separator } from "@workspace/ui/components/separator";
 import { User } from "lucide-react";
 
 export const PersonalInfoCard = () => {
+  const { fullname, location, email, languages } = personalInfo;
+
   return (
     <Card className="gap-2 transition-shadow duration-200 hover:shadow-md">
       <CardHeader>
@@ -28,21 +31,19 @@ export const PersonalInfoCard = () => {
         >
           <li>
             <span className="font-bold">Fullname: </span>
-            <span> Ka Shing Lam</span>
+            <span>{fullname}</span>
           </li>
           <li>
             <span className="font-bold">Location: </span>
-            <span>Hong Kong</span>
+            <span>{location}</span>
           </li>
           <li>
             <span className="font-bold">Email: </span>
-            <span className="break-all">
-              {process.env.NEXT_PUBLIC_EMAIL_ADDRESS}
-            </span>
+            <span className="break-all">{email}</span>
           </li>
           <li>
             <span className="font-bold">Languages: </span>
-            <span>Cantonese, English, Mandarin</span>
+            <span>{languages.join(", ")}</span>
           </li>
         </RevealTextGroup>
       </CardContent>

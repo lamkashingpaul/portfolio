@@ -1,12 +1,15 @@
 import { Icons } from "@/components/icons";
+import { socialLinks } from "@/lib/site-config";
 import { FileText, Mail } from "lucide-react";
 import Link from "next/link";
 
 export const SocialIcons = () => {
+  const { gitHub, linkedIn, email, resume } = socialLinks;
+
   return (
     <>
       <Link
-        href={process.env.NEXT_PUBLIC_GITHUB_URL}
+        href={gitHub}
         target="_blank"
         rel="noopener noreferrer"
         className="text-muted-foreground hover:text-primary transition-colors"
@@ -15,7 +18,7 @@ export const SocialIcons = () => {
         <span className="sr-only">GitHub</span>
       </Link>
       <Link
-        href={process.env.NEXT_PUBLIC_LINKEDIN_URL}
+        href={linkedIn}
         target="_blank"
         rel="noopener noreferrer"
         className="text-muted-foreground hover:text-primary transition-colors"
@@ -24,14 +27,14 @@ export const SocialIcons = () => {
         <span className="sr-only">LinkedIn</span>
       </Link>
       <Link
-        href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}
+        href={email}
         className="text-muted-foreground hover:text-primary transition-colors"
       >
         <Mail className="h-6 w-6" />
         <span className="sr-only">Email</span>
       </Link>
       <Link
-        href={process.env.NEXT_PUBLIC_RESUME_URL}
+        href={resume}
         target="_blank"
         rel="noopener noreferrer"
         className="text-muted-foreground hover:text-primary transition-colors"

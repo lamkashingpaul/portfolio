@@ -1,5 +1,4 @@
-import { TITLE_OF_SITE } from "@/lib/constants";
-import { sectionItems } from "@/lib/site-config";
+import { sections, titleOfSite } from "@/lib/site-config";
 import {
   Sidebar,
   SidebarContent,
@@ -16,10 +15,10 @@ export function AppSidebar() {
     <Sidebar>
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>{TITLE_OF_SITE}</SidebarGroupLabel>
+          <SidebarGroupLabel>{titleOfSite}</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
-              {sectionItems.map((item) => (
+              {Object.values(sections).map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
                     <a href={item.url}>
