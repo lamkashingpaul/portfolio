@@ -1,0 +1,38 @@
+# github actions
+.github
+
+# commit pre-hooks
+.husky
+!.husky/install.mjs
+
+# turbo repo
+**/.turbo
+
+# editor settings
+.vscode
+
+# version controls
+.git
+
+# build files
+**/dist
+**/.next
+**/.react-email
+
+# npm packages
+**/node_modules
+**/npm-debug.log
+
+# aws code pipelines
+**/code-pipeline
+
+# local scripts
+scripts
+
+# docker files
+.dockerignore
+docker-compose.yml
+Dockerfile
+
+# read me files
+**/*.md
