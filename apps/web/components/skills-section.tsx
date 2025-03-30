@@ -14,6 +14,7 @@ const directions = ["right", "left"] as const;
 
 export const SkillsSection = (props: SkillsSectionProps) => {
   const { className } = props;
+
   return (
     <section className={cn("", className)}>
       <div className="container-wrapper">

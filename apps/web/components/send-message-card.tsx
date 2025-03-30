@@ -81,7 +81,12 @@ export const SendMessageCard = (props: SendMessageCardProps) => {
   };
 
   return (
-    <Card className={cn("", className)}>
+    <Card
+      className={cn(
+        "transition-shadow duration-200 hover:shadow-md",
+        className,
+      )}
+    >
       <CardContent>
         <CardDescription>
           Have a project in mind or want to discuss potential opportunities?

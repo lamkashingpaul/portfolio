@@ -1,10 +1,10 @@
 import { Icons } from "@/components/icons";
 import { socialLinks } from "@/lib/site-config";
-import { FileText, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
 import Link from "next/link";
 
 export const SocialIcons = () => {
-  const { gitHub, linkedIn, email, resume } = socialLinks;
+  const { gitHub, linkedIn, email } = socialLinks;
 
   return (
     <>
@@ -32,15 +32,6 @@ export const SocialIcons = () => {
       >
         <Mail className="h-6 w-6" />
         <span className="sr-only">Email</span>
-      </Link>
-      <Link
-        href={resume}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-muted-foreground hover:text-primary transition-colors"
-      >
-        <FileText className="h-6 w-6" />
-        <span className="sr-only">Resume</span>
       </Link>
     </>
   );
