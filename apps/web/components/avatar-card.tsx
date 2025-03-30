@@ -21,7 +21,7 @@ export const AvatarCard = (props: AvatarCardProps) => {
     <div className="flex flex-col items-center justify-center">
       <div
         className={
-          "border-primary shadow-primary flex aspect-square flex-col items-center justify-center overflow-hidden rounded-full border transition-shadow duration-200 hover:shadow-md"
+          "border-primary flex aspect-square flex-col items-center justify-center overflow-hidden rounded-full border-2 transition-shadow duration-200 hover:shadow-md"
         }
         style={{ maxHeight: 64 * m }}
       >

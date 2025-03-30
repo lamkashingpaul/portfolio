@@ -1,6 +1,18 @@
 import { Icons } from "@/components/icons";
-import { Education, Experience } from "@/types";
-import { Home, User, Code, Rocket, Mail } from "lucide-react";
+import { Education, Experience, SkillCategory } from "@/types";
+import {
+  Home,
+  User,
+  Code,
+  Rocket,
+  Mail,
+  Database,
+  Server,
+  Globe,
+  Cloud,
+  Braces,
+  GitBranch,
+} from "lucide-react";
 
 export const sections = {
   home: {
@@ -30,16 +42,20 @@ export const sections = {
   },
 };
 
-export const titleOfSite = "Paul Lam's Digital Garden";
+const name = "Paul Lam";
+const legalName = "Ka Shing Lam";
+export const titleOfSite = `${name}'s Digital Garde`;
 export const titleTemplateOfSite = `%s • ${titleOfSite}`;
 
 const email = "lamkashingpaul@gmail.com";
-
+const phone = "+852 9779 6767";
 export const personalInfo = {
-  fullname: "Ka Shing Lam",
+  name,
+  fullname: legalName,
   location: "Hong Kong",
   email,
   languages: ["Cantonese", "English", "Mandarin"],
+  phone,
 };
 
 export const socialLinks = {
@@ -47,6 +63,7 @@ export const socialLinks = {
   linkedIn: "https://www.linkedin.com/in/lamkashingpaul/",
   email: `mailto:${email}`,
   resume: "#",
+  phone: `tel:+${phone.replace(/\D/g, "")}`,
 };
 
 export const experiences: Experience[] = [
@@ -101,4 +118,65 @@ export const skillIcons = [
   Icons.mui,
   Icons.vite,
   Icons.turborepo,
+];
+
+export const skillCategories: SkillCategory[] = [
+  {
+    title: "Programming Languages",
+    icon: Braces,
+    skills: [
+      { name: "Python", level: "advanced" },
+      { name: "TypeScript", level: "advanced" },
+      { name: "JavaScript", level: "advanced" },
+    ],
+  },
+  {
+    title: "Frontend Development",
+    icon: Globe,
+    skills: [
+      { name: "Next.js", level: "advanced" },
+      { name: "React", level: "advanced" },
+      { name: "Tailwind CSS", level: "intermediate" },
+      { name: "Framer Motion", level: "beginner" },
+      { name: "HTML", level: "beginner" },
+      { name: "CSS", level: "beginner" },
+    ],
+  },
+  {
+    title: "Backend Development",
+    icon: Server,
+    skills: [
+      { name: "NestJS", level: "advanced" },
+      { name: "Express.js", level: "intermediate" },
+      { name: "Node.js", level: "beginner" },
+    ],
+  },
+  {
+    title: "Databases",
+    icon: Database,
+    skills: [
+      { name: "PostgreSQL", level: "advanced" },
+      { name: "MySQL", level: "intermediate" },
+      { name: "Redis", level: "beginner" },
+      { name: "MongoDB", level: "beginner" },
+    ],
+  },
+  {
+    title: "DevOps",
+    icon: GitBranch,
+    skills: [
+      { name: "Git", level: "advanced" },
+      { name: "Docker", level: "intermediate" },
+      { name: "CI/CD", level: "intermediate" },
+      { name: "GitHub Actions", level: "intermediate" },
+    ],
+  },
+  {
+    title: "Cloud Services",
+    icon: Cloud,
+    skills: [
+      { name: "AWS", level: "advanced" },
+      { name: "Azure", level: "beginner" },
+    ],
+  },
 ];

@@ -1,6 +1,7 @@
 import { ContactInformation } from "@/components/contact-information";
 import { RevealText } from "@/components/reveal-text";
 import { SendMessageCard } from "@/components/send-message-card";
+import { SlideText } from "@/components/slide-text";
 import { Separator } from "@workspace/ui/components/separator";
 import { cn } from "@workspace/ui/lib/utils";
 
@@ -25,8 +26,12 @@ export const ContactSection = (props: ContactSectionProps) => {
 
           <div className="space-y-4 lg:space-y-6">
             <div className="grid grid-cols-1 gap-4 lg:grid-cols-[1fr_400px] lg:gap-6">
-              <SendMessageCard />
-              <ContactInformation />
+              <SlideText>
+                <SendMessageCard className="h-full" />
+              </SlideText>
+              <SlideText>
+                <ContactInformation className="h-full" />
+              </SlideText>
             </div>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import { EducationCard } from "@/components/education-card";
 import { ExperienceCard } from "@/components/experience-card";
+import { SlideText } from "@/components/slide-text";
 import { educations, experiences } from "@/lib/site-config";
 import {
   Tabs,
@@ -23,18 +24,22 @@ export const ExperienceTabs = () => {
         </TabsTrigger>
       </TabsList>
       <TabsContent value="experience">
-        <div className="space-y-4 lg:space-y-6">
-          {experiences.map((experience, i) => (
-            <ExperienceCard key={i} {...experience} />
-          ))}
-        </div>
+        <SlideText>
+          <div className="space-y-4 lg:space-y-6">
+            {experiences.map((experience, i) => (
+              <ExperienceCard key={i} {...experience} />
+            ))}
+          </div>
+        </SlideText>
       </TabsContent>
       <TabsContent value="education">
-        <div className="space-y-4 lg:space-y-6">
-          {educations.map((education, i) => (
-            <EducationCard key={i} {...education} />
-          ))}
-        </div>
+        <SlideText>
+          <div className="space-y-4 lg:space-y-6">
+            {educations.map((education, i) => (
+              <EducationCard key={i} {...education} />
+            ))}
+          </div>
+        </SlideText>
       </TabsContent>
     </Tabs>
   );

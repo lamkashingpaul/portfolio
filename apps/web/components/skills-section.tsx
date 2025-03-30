@@ -1,81 +1,16 @@
 import { RevealText } from "@/components/reveal-text";
 import { SkillsCard } from "@/components/skills-card";
-import { SkillCategory } from "@/types";
+import { SlideText } from "@/components/slide-text";
+import { skillCategories } from "@/lib/site-config";
 import { Separator } from "@workspace/ui/components/separator";
 import { cn } from "@workspace/ui/lib/utils";
-import {
-  Database,
-  Server,
-  Globe,
-  Cloud,
-  Braces,
-  GitBranch,
-  Code,
-} from "lucide-react";
+import { Code } from "lucide-react";
 
 interface SkillsSectionProps {
   className?: string;
 }
 
-const SKILL_CATEGORIES: SkillCategory[] = [
-  {
-    title: "Programming Languages",
-    icon: Braces,
-    skills: [
-      { name: "Python", level: "advanced" },
-      { name: "TypeScript", level: "advanced" },
-      { name: "JavaScript", level: "advanced" },
-    ],
-  },
-  {
-    title: "Frontend Development",
-    icon: Globe,
-    skills: [
-      { name: "Next.js", level: "advanced" },
-      { name: "React", level: "advanced" },
-      { name: "Tailwind CSS", level: "intermediate" },
-      { name: "HTML", level: "beginner" },
-      { name: "CSS", level: "beginner" },
-    ],
-  },
-  {
-    title: "Backend Development",
-    icon: Server,
-    skills: [
-      { name: "NestJS", level: "advanced" },
-      { name: "Express.js", level: "intermediate" },
-      { name: "Node.js", level: "beginner" },
-    ],
-  },
-  {
-    title: "Databases",
-    icon: Database,
-    skills: [
-      { name: "PostgreSQL", level: "advanced" },
-      { name: "MySQL", level: "intermediate" },
-      { name: "Redis", level: "beginner" },
-      { name: "MongoDB", level: "beginner" },
-    ],
-  },
-  {
-    title: "DevOps",
-    icon: GitBranch,
-    skills: [
-      { name: "Git", level: "advanced" },
-      { name: "Docker", level: "intermediate" },
-      { name: "CI/CD", level: "intermediate" },
-      { name: "GitHub Actions", level: "intermediate" },
-    ],
-  },
-  {
-    title: "Cloud Services",
-    icon: Cloud,
-    skills: [
-      { name: "AWS", level: "advanced" },
-      { name: "Azure", level: "beginner" },
-    ],
-  },
-];
+const directions = ["right", "left"] as const;
 
 export const SkillsSection = (props: SkillsSectionProps) => {
   const { className } = props;
@@ -94,22 +29,26 @@ export const SkillsSection = (props: SkillsSectionProps) => {
 
           <div className="space-y-4 lg:space-y-6">
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-6">
-              {SKILL_CATEGORIES.map((category, i) => (
-                <SkillsCard key={i} {...category} />
+              {skillCategories.map((category, i) => (
+                <SlideText key={i} direction={directions[i & 1]}>
+                  <SkillsCard className="h-full" {...category} />
+                </SlideText>
               ))}
             </div>
 
-            <div className="flex flex-col items-center justify-center gap-2 text-center">
-              <div className="bg-secondary rounded-full p-2 shadow-md">
-                <Code />
+            <SlideText>
+              <div className="flex flex-col items-center justify-center gap-2 text-center">
+                <div className="bg-secondary rounded-full p-2 shadow-md">
+                  <Code />
+                </div>
+                <h3 className="text-xl font-medium">Always Learning</h3>
+                <p className="text-muted-foreground max-w-[400px] lg:max-w-[600px]">
+                  I&rsquo;m constantly expanding my skill set and staying
+                  up-to-date with the latest technologies and best practices in
+                  software development.
+                </p>
               </div>
-              <h3 className="text-xl font-medium">Always Learning</h3>
-              <p className="text-muted-foreground max-w-[400px] lg:max-w-[600px]">
-                I&rsquo;m constantly expanding my skill set and staying
-                up-to-date with the latest technologies and best practices in
-                software development.
-              </p>
-            </div>
+            </SlideText>
           </div>
         </div>
       </div>

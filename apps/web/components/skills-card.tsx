@@ -7,14 +7,22 @@ import {
   CardTitle,
 } from "@workspace/ui/components/card";
 import { Separator } from "@workspace/ui/components/separator";
+import { cn } from "@workspace/ui/lib/utils";
 
-type SkillsCardProps = SkillCategory;
+type SkillsCardProps = SkillCategory & {
+  className?: string;
+};
 
 export const SkillsCard = (props: SkillsCardProps) => {
-  const { title, icon: Icon, skills } = props;
+  const { className, title, icon: Icon, skills } = props;
 
   return (
-    <Card className="gap-2 transition-shadow duration-200 hover:shadow-md">
+    <Card
+      className={cn(
+        "gap-2 transition-shadow duration-200 hover:shadow-md",
+        className,
+      )}
+    >
       <CardHeader>
         <CardTitle className="flex flex-row items-end justify-start gap-2 overflow-hidden">
           <Icon className="text-primary size-6 md:size-8" />

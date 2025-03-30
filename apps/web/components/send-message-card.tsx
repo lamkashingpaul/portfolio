@@ -27,6 +27,7 @@ import { Textarea } from "@workspace/ui/components/textarea";
 import { AlertCircle, SendIcon, TerminalIcon } from "lucide-react";
 import { Separator } from "@workspace/ui/components/separator";
 import { useSendMessage } from "@/hooks/use-send-message";
+import { cn } from "@workspace/ui/lib/utils";
 
 const sendMessageFormSchema = z.object({
   name: z.string().trim().min(1, { message: "Name is required" }),
@@ -41,7 +42,13 @@ const sendMessageFormSchema = z.object({
 
 type SendMessageFormDto = z.infer<typeof sendMessageFormSchema>;
 
-export const SendMessageCard = () => {
+interface SendMessageCardProps {
+  className?: string;
+}
+
+export const SendMessageCard = (props: SendMessageCardProps) => {
+  const { className } = props;
+
   const form = useForm<SendMessageFormDto>({
     resolver: zodResolver(sendMessageFormSchema),
     defaultValues: {
@@ -74,7 +81,7 @@ export const SendMessageCard = () => {
   };
 
   return (
-    <Card>
+    <Card className={cn("", className)}>
       <CardContent>
         <CardDescription>
           Have a project in mind or want to discuss potential opportunities?

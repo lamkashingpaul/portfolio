@@ -1,4 +1,3 @@
-import { RevealTextGroup } from "@/components/reveal-text-group";
 import {
   Card,
   CardContent,
@@ -6,11 +5,23 @@ import {
   CardTitle,
 } from "@workspace/ui/components/card";
 import { Separator } from "@workspace/ui/components/separator";
+import { cn } from "@workspace/ui/lib/utils";
 import { Lightbulb } from "lucide-react";
 
-export const WhoIAmCard = () => {
+interface WhoIAmCardProps {
+  className?: string;
+}
+
+export const WhoIAmCard = (props: WhoIAmCardProps) => {
+  const { className } = props;
+
   return (
-    <Card className="gap-2 transition-shadow duration-200 hover:shadow-md">
+    <Card
+      className={cn(
+        "gap-2 transition-shadow duration-200 hover:shadow-md",
+        className,
+      )}
+    >
       <CardHeader>
         <CardTitle className="flex flex-row items-end justify-start gap-2 overflow-hidden">
           <Lightbulb className="text-primary size-6 md:size-8" />
@@ -19,10 +30,7 @@ export const WhoIAmCard = () => {
         <Separator />
       </CardHeader>
       <CardContent>
-        <RevealTextGroup
-          className="space-y-4 lg:space-y-6"
-          coverClassName="bg-muted-foreground"
-        >
+        <div className="space-y-4 lg:space-y-6">
           <p className="text-muted-foreground">
             I am Paul Lam, a Junior Software Developer at Forex Forest Limited,
             where I focus on developing applications using Next.js and NestJS.
@@ -46,7 +54,7 @@ export const WhoIAmCard = () => {
             algorithms, which keeps me engaged and helps me discover innovative
             solutions for my professional work.
           </p>
-        </RevealTextGroup>
+        </div>
       </CardContent>
     </Card>
   );

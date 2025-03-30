@@ -20,7 +20,12 @@ export const IconsMarquee = (props: IconsMarqueeProps) => {
       className={cn("p-4", className)}
     >
       {icons.map((Icon, index) => (
-        <Icon key={index} className="hover:scale-120 size-12 px-1" />
+        <div
+          key={index}
+          className="hover:scale-120 mx-2 rounded-full bg-white p-2 shadow-md transition-transform duration-200 ease-in-out"
+        >
+          <Icon className="size-8" />
+        </div>
       ))}
     </Marquee>
   );
