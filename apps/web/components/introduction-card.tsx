@@ -4,6 +4,7 @@ import { TypewriterText } from "@/components/typewriter-text";
 import { Button } from "@workspace/ui/components/button";
 import { cn } from "@workspace/ui/lib/utils";
 import Link from "next/link";
+import { personalInfo } from "@/lib/site-config";
 
 interface IntroductionCardProps {
   className?: string;
@@ -16,7 +17,8 @@ export const IntroductionCard = (props: IntroductionCardProps) => {
       <div className="space-y-2">
         <RevealText coverClassName="bg-primary">
           <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
-            Hi, this is <span className="text-primary">Paul Lam</span>
+            {"Hi, this is "}
+            <span className="text-primary">{personalInfo.name}</span>
           </h1>
         </RevealText>
 
@@ -24,11 +26,7 @@ export const IntroductionCard = (props: IntroductionCardProps) => {
           <TypewriterText
             cursorClassName="text-primary"
             staticText="I'm a"
-            typingTexts={[
-              "Full Stack Developer",
-              "AWS Certified Architect",
-              "Problem Solver",
-            ]}
+            typingTexts={personalInfo.titles}
           />
         </RevealText>
 

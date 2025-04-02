@@ -38,7 +38,7 @@ export const SiteFooter = () => {
               >
                 {` ${personalInfo.name} `}
               </a>
-              All rights reserved. The source code is available on{" "}
+              {"All rights reserved. The source code is available on "}
               <a
                 href={`${socialLinks.gitHub}/portfolio`}
                 target="_blank"

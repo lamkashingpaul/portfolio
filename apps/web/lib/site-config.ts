@@ -17,27 +17,32 @@ import {
 export const sections = {
   home: {
     title: "Home",
-    url: "#home",
+    id: "home",
+    href: "#",
     icon: Home,
   },
   about: {
     title: "About",
-    url: "#about",
+    id: "about",
+    href: "#about",
     icon: User,
   },
   skills: {
     title: "Skills",
-    url: "#skills",
+    id: "skills",
+    href: "#skills",
     icon: Code,
   },
   projects: {
     title: "Projects",
-    url: "#projects",
+    id: "projects",
+    href: "#projects",
     icon: Rocket,
   },
   contact: {
     title: "Contact",
-    url: "#contact",
+    id: "contact",
+    href: "#contact",
     icon: Mail,
   },
 };
@@ -56,6 +61,7 @@ export const personalInfo = {
   email,
   languages: ["Cantonese", "English", "Mandarin"],
   phone,
+  titles: ["Full Stack Developer", "AWS Certified Architect", "Problem Solver"],
 };
 
 export const socialLinks = {

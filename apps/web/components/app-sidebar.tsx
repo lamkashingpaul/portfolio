@@ -18,12 +18,12 @@ export function AppSidebar() {
           <SidebarGroupLabel>{titleOfSite}</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
-              {Object.values(sections).map((item) => (
-                <SidebarMenuItem key={item.title}>
+              {Object.values(sections).map((section) => (
+                <SidebarMenuItem key={section.title}>
                   <SidebarMenuButton asChild>
-                    <a href={item.url}>
-                      <item.icon />
-                      <span>{item.title}</span>
+                    <a href={section.href}>
+                      <section.icon />
+                      <span>{section.title}</span>
                     </a>
                   </SidebarMenuButton>
                 </SidebarMenuItem>

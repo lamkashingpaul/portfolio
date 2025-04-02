@@ -1,6 +1,6 @@
 import { RevealText } from "@/components/reveal-text";
 import { SlideText } from "@/components/slide-text";
-import { projects } from "@/lib/site-config";
+import { projects, sections } from "@/lib/site-config";
 import { Separator } from "@workspace/ui/components/separator";
 import { cn } from "@workspace/ui/lib/utils";
 import { TrafficCone } from "lucide-react";
@@ -13,7 +13,10 @@ export const ProjectsSection = (props: ProjectsSectionProps) => {
   const { className } = props;
 
   return (
-    <section className={cn("", className)}>
+    <section
+      id={sections.projects.id}
+      className={cn("py-12 md:py-24", className)}
+    >
       <div className="container-wrapper">
         <div className="container py-4">
           <div className="flex flex-row justify-center">

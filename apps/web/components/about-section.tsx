@@ -5,6 +5,7 @@ import { PersonalInfoCard } from "@/components/personal-info-card";
 import { RevealText } from "@/components/reveal-text";
 import { SlideText } from "@/components/slide-text";
 import { WhoIAmCard } from "@/components/who-i-am-card";
+import { sections } from "@/lib/site-config";
 import { Separator } from "@workspace/ui/components/separator";
 import { cn } from "@workspace/ui/lib/utils";
 
@@ -15,7 +16,7 @@ interface AboutSectionProps {
 export const AboutSection = (props: AboutSectionProps) => {
   const { className } = props;
   return (
-    <section className={cn("", className)}>
+    <section id={sections.about.id} className={cn("py-12 md:py-24", className)}>
       <div className="container-wrapper">
         <div className="container py-4">
           <div className="flex flex-row justify-center">
