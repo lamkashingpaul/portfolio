@@ -49,7 +49,7 @@ export const sections = {
 
 const name = "Paul Lam";
 const legalName = "Ka Shing Lam";
-export const titleOfSite = `${name}'s Digital Garde`;
+export const titleOfSite = `${name}'s Lab`;
 export const titleTemplateOfSite = `%s • ${titleOfSite}`;
 
 const email = "lamkashingpaul@gmail.com";
