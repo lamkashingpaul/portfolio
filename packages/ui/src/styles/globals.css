@@ -139,6 +139,11 @@
     scrollbar-width: thin;
     scrollbar-color: oklch(var(--border)) transparent;
   }
+
+  button:not([disabled]),
+  [role="button"]:not([disabled]) {
+    cursor: pointer;
+  }
 }
 
 @layer utilities {
@@ -151,10 +156,10 @@
   }
 
   .container-wrapper {
-    @apply max-w-[1400px] min-[1800px]:max-w-screen-2xl mx-auto w-full;
+    @apply mx-auto w-full max-w-[1400px] min-[1800px]:max-w-screen-2xl;
   }
 
   .container {
-    @apply px-4 xl:px-6 mx-auto max-w-screen-2xl;
+    @apply mx-auto max-w-screen-2xl px-4 xl:px-6;
   }
 }
