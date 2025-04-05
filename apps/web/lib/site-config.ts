@@ -62,6 +62,11 @@ export const personalInfo = {
   languages: ["Cantonese", "English", "Mandarin"],
   phone,
   titles: ["Full Stack Developer", "AWS Certified Architect", "Problem Solver"],
+  summary:
+    "Tech Enthusiast specializing in building exceptional digital experiences",
+  introductions: [
+    "I design and develop intuitive web applications that enhance user experiences, and I genuinely love what I do. With over 2 years of experience in full-stack development, I'm passionate about transforming ideas into reality through elegant interfaces and efficient, robust code.",
+  ],
 };
 
 export const socialLinks = {
@@ -71,6 +76,12 @@ export const socialLinks = {
   resume: `https://docs.google.com/document/d/1T6Ck2ts0jrGZU3gdAdKysChXcP_QmiNQ/edit?tab=t.0`,
   phone: `tel:+${phone.replace(/\D/g, "")}`,
 };
+
+export const whoIAm = [
+  "I am Paul Lam, a Junior Software Developer at Forex Forest Limited, where I focus on developing applications using Next.js and NestJS. My work enhances user access to critical trading data, and I design robust database schemas with PostgreSQL while implementing scalable solutions on AWS for high performance and reliability.",
+  "With a degree in Mathematics and Information Engineering from The Chinese University of Hong Kong, I bring strong analytical skills to my projects. As an AWS Certified Solutions Architect, I am committed to driving innovation and improving user experiences in collaborative environments.",
+  "In my free time, I enjoy exploring new technologies and working on side projects that fuel my creativity. I’m particularly focused on honing my coding skills in data structures and algorithms, which keeps me engaged and helps me discover innovative solutions for my professional work.",
+];
 
 export const experiences: Experience[] = [
   {

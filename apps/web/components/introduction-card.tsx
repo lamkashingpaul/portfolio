@@ -12,6 +12,7 @@ interface IntroductionCardProps {
 
 export const IntroductionCard = (props: IntroductionCardProps) => {
   const { className } = props;
+
   return (
     <div className={cn("flex flex-col justify-center gap-4", className)}>
       <div className="space-y-2">
@@ -32,19 +33,16 @@ export const IntroductionCard = (props: IntroductionCardProps) => {
 
         <RevealText coverClassName="bg-muted-foreground">
           <p className="text-muted-foreground max-w-[600px] text-xl md:text-2xl">
-            Tech Enthusiast specializing in building exceptional digital
-            experiences
+            {personalInfo.summary}
           </p>
         </RevealText>
 
         <RevealText coverClassName="bg-muted-foreground">
-          <p className="text-muted-foreground max-w-[600px] pt-4">
-            I design and develop intuitive web applications that enhance user
-            experiences, and I genuinely love what I do. With over 2 years of
-            experience in full-stack development, I&apos;m passionate about
-            transforming ideas into reality through elegant interfaces and
-            efficient, robust code.
-          </p>
+          {personalInfo.introductions.map((item, i) => (
+            <p key={i} className="text-muted-foreground max-w-[600px] pt-4">
+              {item}
+            </p>
+          ))}
         </RevealText>
       </div>
 
