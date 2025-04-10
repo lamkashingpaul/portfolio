@@ -184,8 +184,10 @@ export const skillCategories: SkillCategory[] = [
     skills: [
       { name: "Git", level: "advanced" },
       { name: "Docker", level: "intermediate" },
+      { name: "Terraform", level: "intermediate" },
       { name: "CI/CD", level: "intermediate" },
       { name: "GitHub Actions", level: "intermediate" },
+      { name: "Jest", level: "beginner" },
     ],
   },
   {
