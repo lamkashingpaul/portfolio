@@ -9,10 +9,10 @@ interface SlideTextProps {
 }
 
 const transformMap = {
-  up: { y: 20 },
-  down: { y: -20 },
-  left: { x: 20 },
-  right: { x: -20 },
+  up: { y: 16 },
+  down: { y: -16 },
+  left: { x: 16 },
+  right: { x: -16 },
 };
 
 export const SlideText = (props: SlideTextProps) => {
