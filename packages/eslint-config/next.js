@@ -15,6 +15,7 @@ import { config as baseConfig } from "./base.js";
  * */
 export const nextJsConfig = [
   ...baseConfig,
+  { ignores: ["*.js", ".*.js", "node_modules/", ".next/"] },
   js.configs.recommended,
   eslintConfigPrettier,
   ...tseslint.configs.recommended,
