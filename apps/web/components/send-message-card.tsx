@@ -64,6 +64,7 @@ export const SendMessageCard = (props: SendMessageCardProps) => {
   const {
     reset,
     setError,
+    handleSubmit,
     formState: { isSubmitting, errors },
   } = form;
 
@@ -95,7 +96,7 @@ export const SendMessageCard = (props: SendMessageCardProps) => {
         <Separator className="mb-4" />
 
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
             <FormField
               control={form.control}
               name="name"
@@ -152,7 +153,7 @@ export const SendMessageCard = (props: SendMessageCardProps) => {
               )}
             />
 
-            {errors?.root?.serverError?.type === "server" ? (
+            {errors.root?.serverError?.type === "server" ? (
               <Alert variant="destructive">
                 <AlertCircle className="h-4 w-4" />
                 <AlertTitle>Error</AlertTitle>

@@ -4,7 +4,6 @@ import eslintConfigPrettier from "eslint-config-prettier";
 import pluginReact from "eslint-plugin-react";
 import pluginReactHooks from "eslint-plugin-react-hooks";
 import globals from "globals";
-import tseslint from "typescript-eslint";
 
 import { config as baseConfig } from "./base.js";
 
@@ -15,10 +14,9 @@ import { config as baseConfig } from "./base.js";
  * */
 export const nextJsConfig = [
   ...baseConfig,
-  { ignores: ["*.js", ".*.js", "node_modules/", ".next/"] },
+  { ignores: ["*.js", ".*.js", "*.mjs", "node_modules/", ".next/"] },
   js.configs.recommended,
   eslintConfigPrettier,
-  ...tseslint.configs.recommended,
   {
     ...pluginReact.configs.flat.recommended,
     languageOptions: {
@@ -57,6 +55,7 @@ export const nextJsConfig = [
           varsIgnorePattern: "^_",
         },
       ],
+      "@typescript-eslint/no-deprecated": "warn",
     },
   },
 ];
