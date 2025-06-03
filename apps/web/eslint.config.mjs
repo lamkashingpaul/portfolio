@@ -11,8 +11,10 @@ const nextJsConfig = [
         tsconfigRootDir: import.meta.dirname,
       },
       globals: {
-        React: true,
+        document: true,
         NodeJS: true,
+        React: true,
+        window: true,
       },
     },
   },
