@@ -1,5 +1,5 @@
 import { Icons } from "@/components/icons";
-import { Education, Experience, SkillCategory } from "@/types";
+import { Education, Experience, SideProject, SkillCategory } from "@/types";
 import {
   Home,
   User,
@@ -62,8 +62,7 @@ export const personalInfo = {
   languages: ["Cantonese", "English", "Mandarin"],
   phone,
   titles: ["Full Stack Developer", "AWS Certified Architect", "Problem Solver"],
-  summary:
-    "Tech Enthusiast specializing in building exceptional digital experiences",
+  summary: `Tech Enthusiast specializing in building exceptional digital experiences`,
   introductions: [
     "I design and develop intuitive web applications that enhance user experiences, and I genuinely love what I do. With over 3 years of experience in full-stack development, I'm passionate about transforming ideas into reality through elegant interfaces and efficient, robust code.",
   ],
@@ -135,16 +134,22 @@ export const skillIcons = [
   Icons.mui,
   Icons.vite,
   Icons.turborepo,
+  Icons.langChain,
+  Icons.langGraph,
+  Icons.fastApi,
+  Icons.redis,
 ];
 
 export const skillCategories: SkillCategory[] = [
   {
-    title: "Programming Languages",
+    title: "Languages & Frameworks",
     icon: Braces,
     skills: [
       { name: "Python", level: "advanced" },
       { name: "TypeScript", level: "advanced" },
       { name: "JavaScript", level: "advanced" },
+      { name: "LangChain", level: "intermediate" },
+      { name: "LangGraph", level: "beginner" },
     ],
   },
   {
@@ -165,6 +170,7 @@ export const skillCategories: SkillCategory[] = [
     skills: [
       { name: "NestJS", level: "advanced" },
       { name: "Express.js", level: "intermediate" },
+      { name: "FastAPI", level: "intermediate" },
       { name: "Node.js", level: "beginner" },
     ],
   },
@@ -200,4 +206,26 @@ export const skillCategories: SkillCategory[] = [
   },
 ];
 
-export const projects = [];
+export const projects: SideProject[] = [
+  {
+    id: "2",
+    title: "Summarize",
+    description: `An intelligent research article assistant using Retrieval-Augmented Generation (RAG) to summarize and extract key insights from academic papers and documents with high contextual accuracy.`,
+    image: "/summarize.png",
+    demoUrl: "https://summarize.paullam.dev",
+    githubUrl: "https://github.com/lamkashingpaul/summarize",
+    category: "ai",
+    technologies: ["LangChain", "FastAPI", "React", "PostgreSQL"],
+  },
+  {
+    id: "1",
+    title: "Portfolio Website",
+    description: `A responsive portfolio website built with Next.js and Tailwind CSS, featuring animations and a dark mode toggle.`,
+    image: "/portfolio.png",
+    demoUrl: "https://portfolio.paullam.dev",
+    githubUrl: "https://github.com/lamkashingpaul/portfolio",
+    category: "frontend",
+    technologies: ["Next.js", "Tailwind CSS", "TypeScript", "Framer Motion"],
+    featured: true,
+  },
+];
