@@ -26,11 +26,13 @@ export const ExperienceCard = (props: ExperienceCardProps) => {
           <Badge variant="outline">{period}</Badge>
         </div>
 
-        {descriptions.map((description, index) => (
-          <li key={index} className="text-muted-foreground">
-            {description}
-          </li>
-        ))}
+        <ul className="list-inside list-disc space-y-4">
+          {descriptions.map((description, index) => (
+            <li key={index} className="text-muted-foreground">
+              {description}
+            </li>
+          ))}
+        </ul>
       </CardContent>
     </Card>
   );

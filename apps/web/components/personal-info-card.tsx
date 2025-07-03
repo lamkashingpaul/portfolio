@@ -35,22 +35,26 @@ export const PersonalInfoCard = (props: PersonalInfoCardProps) => {
       <CardContent className="space-y-4 lg:space-y-6">
         <OpenToWorkIndicator />
 
-        <li>
-          <span className="font-bold">Fullname: </span>
-          <span>{fullname}</span>
-        </li>
-        <li>
-          <span className="font-bold">Location: </span>
-          <span>{location}</span>
-        </li>
-        <li>
-          <span className="font-bold">Email: </span>
-          <span className="break-all">{email}</span>
-        </li>
-        <li>
-          <span className="font-bold">Languages: </span>
-          <span>{languages.join(", ")}</span>
-        </li>
+        <ul className="list-inside list-disc space-y-4 lg:space-y-6">
+          <li>
+            <span className="font-bold">Fullname: </span>
+            <span className="text-muted-foreground">{fullname}</span>
+          </li>
+          <li>
+            <span className="font-bold">Location: </span>
+            <span className="text-muted-foreground">{location}</span>
+          </li>
+          <li>
+            <span className="font-bold">Email: </span>
+            <span className="text-muted-foreground break-all">{email}</span>
+          </li>
+          <li>
+            <span className="font-bold">Languages: </span>
+            <span className="text-muted-foreground">
+              {languages.join(", ")}
+            </span>
+          </li>
+        </ul>
       </CardContent>
     </Card>
   );
