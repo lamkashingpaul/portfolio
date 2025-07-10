@@ -30,14 +30,19 @@ import { useSendMessage } from "@/hooks/use-send-message";
 import { cn } from "@workspace/ui/lib/utils";
 
 const sendMessageFormSchema = z.object({
-  name: z.string().trim().min(1, { message: "Name is required" }),
+  name: z.string().trim().min(1, { error: "Name is required" }),
   email: z
-    .string()
-    .trim()
-    .min(1, { message: "Email is required" })
-    .email({ message: "Invalid email address" }),
-  subject: z.string().trim().min(1, { message: "Subject is required" }),
-  message: z.string().trim().min(1, { message: "Message is required" }),
+    .email({
+      error: (issue) => {
+        if (!issue.input) {
+          return "Email is required";
+        }
+        return "Invalid email address";
+      },
+    })
+    .transform((value) => value.toLowerCase()),
+  subject: z.string().trim().min(1, { error: "Subject is required" }),
+  message: z.string().trim().min(1, { error: "Message is required" }),
 });
 
 type SendMessageFormDto = z.infer<typeof sendMessageFormSchema>;
