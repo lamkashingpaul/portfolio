@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.1",
-    "@tanstack/react-query": "^5.84.2",
+    "@tanstack/react-query": "^5.85.0",
     "@workspace/ui": "workspace:*",
     "lucide-react": "^0.539.0",
     "motion": "^12.23.12",
@@ -23,12 +23,12 @@
     "react-dom": "^19.1.1",
     "react-fast-marquee": "^1.6.5",
     "react-hook-form": "^7.62.0",
-    "zod": "^4.0.16"
+    "zod": "^4.0.17"
   },
   "devDependencies": {
-    "@tanstack/react-query-devtools": "^5.84.2",
+    "@tanstack/react-query-devtools": "^5.85.0",
     "@types/node": "^24.2.1",
-    "@types/react": "^19.1.9",
+    "@types/react": "^19.1.10",
     "@types/react-dom": "^19.1.7",
     "@workspace/eslint-config": "workspace:^",
     "@workspace/typescript-config": "workspace:*",
