@@ -138,6 +138,8 @@ export const skillIcons = [
   Icons.langGraph,
   Icons.fastApi,
   Icons.redis,
+  Icons.java,
+  Icons.springBoot,
 ];
 
 export const skillCategories: SkillCategory[] = [
@@ -150,6 +152,7 @@ export const skillCategories: SkillCategory[] = [
       { name: "JavaScript", level: "advanced" },
       { name: "LangChain", level: "intermediate" },
       { name: "LangGraph", level: "beginner" },
+      { name: "Java", level: "beginner" },
     ],
   },
   {
@@ -172,6 +175,7 @@ export const skillCategories: SkillCategory[] = [
       { name: "Express.js", level: "intermediate" },
       { name: "FastAPI", level: "intermediate" },
       { name: "Node.js", level: "beginner" },
+      { name: "Spring Boot", level: "beginner" },
     ],
   },
   {
@@ -182,6 +186,7 @@ export const skillCategories: SkillCategory[] = [
       { name: "MySQL", level: "intermediate" },
       { name: "Redis", level: "beginner" },
       { name: "MongoDB", level: "beginner" },
+      { name: "SQLite", level: "beginner" },
     ],
   },
   {
