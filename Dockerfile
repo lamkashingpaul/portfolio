@@ -1,5 +1,5 @@
 # base
-FROM node:24.6.0-slim AS base
+FROM node:24.11.1-slim AS base
 ENV CI=1
 ENV PNPM_HOME=/pnpm
 ENV PATH=$PNPM_HOME:$PATH
