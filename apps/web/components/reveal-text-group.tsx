@@ -1,8 +1,8 @@
 "use client";
 
-import { RevealText } from "@/components/reveal-text";
 import { cn } from "@workspace/ui/lib/utils";
-import { Children, isValidElement, cloneElement } from "react";
+import { Children, cloneElement, isValidElement } from "react";
+import { RevealText } from "@/components/reveal-text";
 
 interface TextRevealProps {
   children?: React.ReactNode;
@@ -18,15 +18,18 @@ export const RevealTextGroup = (props: TextRevealProps) => {
   return (
     <div className={cn("", className)}>
       {children.map((child, index) => {
+        const key =
+          child && typeof child === "object" && "key" in child
+            ? child.key
+            : `reveal-${index}`;
+
         if (isValidElement(child) && child.type === RevealText) {
-          return cloneElement(child, {
-            key: index,
-          });
+          return cloneElement(child, { key });
         }
 
         return (
           <RevealText
-            key={index}
+            key={key}
             className={revealTextClassName}
             coverClassName={coverClassName}
           >

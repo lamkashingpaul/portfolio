@@ -1,9 +1,9 @@
-import { SocialIcons } from "@/components/social-icons";
-import { RevealText } from "@/components/reveal-text";
-import { TypewriterText } from "@/components/typewriter-text";
 import { Button } from "@workspace/ui/components/button";
 import { cn } from "@workspace/ui/lib/utils";
 import Link from "next/link";
+import { RevealText } from "@/components/reveal-text";
+import { SocialIcons } from "@/components/social-icons";
+import { TypewriterText } from "@/components/typewriter-text";
 import { personalInfo } from "@/lib/site-config";
 
 interface IntroductionCardProps {
@@ -32,14 +32,14 @@ export const IntroductionCard = (props: IntroductionCardProps) => {
         </RevealText>
 
         <RevealText coverClassName="bg-muted-foreground">
-          <p className="text-muted-foreground max-w-[600px] text-xl md:text-2xl">
+          <p className="text-muted-foreground max-w-150 text-xl md:text-2xl">
             {personalInfo.summary}
           </p>
         </RevealText>
 
         <RevealText coverClassName="bg-muted-foreground">
-          {personalInfo.introductions.map((item, i) => (
-            <p key={i} className="text-muted-foreground max-w-[600px] pt-4">
+          {personalInfo.introductions.map((item) => (
+            <p key={item} className="text-muted-foreground max-w-150 pt-4">
               {item}
             </p>
           ))}

@@ -1,10 +1,10 @@
 # base
-FROM node:24.11.1-slim AS base
+FROM node:25.2.1-slim AS base
 ENV CI=1
 ENV PNPM_HOME=/pnpm
 ENV PATH=$PNPM_HOME:$PATH
 ENV NODE_ENV=production
-RUN corepack enable
+RUN npm install -g pnpm
 RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install turbo@latest --global
 USER node
 WORKDIR /home/node/app
@@ -23,20 +23,20 @@ RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --prod=false --fr
 COPY --from=pruned-web --chown=node:node /home/node/app/out/full/ ./
 
 FROM web-base-with-dev-dependencies AS web-dev
-RUN pnpm dev
-CMD [ "pnpm", "dev" ]
+RUN pnpm run dev
+CMD [ "pnpm", "run", "dev" ]
 
-FROM web-base-with-dev-dependencies AS web-lint
-RUN pnpm lint
-CMD [ "pnpm", "lint" ]
+FROM web-base-with-dev-dependencies AS web-ci
+RUN pnpm run ci
+CMD [ "pnpm", "run", "ci" ]
 
 FROM web-base-with-dev-dependencies AS web-test
-RUN pnpm test
-CMD [ "pnpm", "test" ]
+RUN pnpm run test
+CMD [ "pnpm", "run", "test" ]
 
 FROM web-base-with-dev-dependencies AS web-build
-RUN pnpm build
-CMD [ "pnpm", "build" ]
+RUN pnpm run build
+CMD [ "pnpm", "run", "build" ]
 
 FROM base AS web-prod
 EXPOSE 3000

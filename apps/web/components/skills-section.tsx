@@ -1,10 +1,10 @@
+import { Separator } from "@workspace/ui/components/separator";
+import { cn } from "@workspace/ui/lib/utils";
+import { Code } from "lucide-react";
 import { RevealText } from "@/components/reveal-text";
 import { SkillsCard } from "@/components/skills-card";
 import { SlideText } from "@/components/slide-text";
 import { sections, skillCategories } from "@/lib/site-config";
-import { Separator } from "@workspace/ui/components/separator";
-import { cn } from "@workspace/ui/lib/utils";
-import { Code } from "lucide-react";
 
 interface SkillsSectionProps {
   className?: string;
@@ -34,7 +34,7 @@ export const SkillsSection = (props: SkillsSectionProps) => {
           <div className="space-y-4 lg:space-y-6">
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-6">
               {skillCategories.map((category, i) => (
-                <SlideText key={i} direction={directions[i & 1]}>
+                <SlideText key={category.title} direction={directions[i & 1]}>
                   <SkillsCard className="h-full" {...category} />
                 </SlideText>
               ))}
@@ -46,7 +46,7 @@ export const SkillsSection = (props: SkillsSectionProps) => {
                   <Code />
                 </div>
                 <h3 className="text-xl font-medium">Always Learning</h3>
-                <p className="text-muted-foreground max-w-[400px] lg:max-w-[600px]">
+                <p className="text-muted-foreground max-w-100 lg:max-w-150">
                   I&rsquo;m constantly expanding my skill set and staying
                   up-to-date with the latest technologies and best practices in
                   software development.

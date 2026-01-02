@@ -1,9 +1,8 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 @source "../../../apps/**/*.{ts,tsx}";
 @source "../../../components/**/*.{ts,tsx}";
 @source "../**/*.{ts,tsx}";
-
-@import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -156,7 +155,7 @@
   }
 
   .container-wrapper {
-    @apply mx-auto w-full max-w-[1400px] min-[1800px]:max-w-screen-2xl;
+    @apply mx-auto w-full max-w-350 min-[1800px]:max-w-screen-2xl;
   }
 
   .container {

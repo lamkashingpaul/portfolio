@@ -1,6 +1,6 @@
-import { socialLinks } from "@/lib/site-config";
 import { FileText } from "lucide-react";
 import Link from "next/link";
+import { socialLinks } from "@/lib/site-config";
 
 export const OpenToWorkIndicator = () => {
   return (

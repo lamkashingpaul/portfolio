@@ -1,10 +1,10 @@
+import { Separator } from "@workspace/ui/components/separator";
+import { cn } from "@workspace/ui/lib/utils";
 import { ContactInformation } from "@/components/contact-information";
 import { RevealText } from "@/components/reveal-text";
 import { SendMessageCard } from "@/components/send-message-card";
 import { SlideText } from "@/components/slide-text";
 import { sections } from "@/lib/site-config";
-import { Separator } from "@workspace/ui/components/separator";
-import { cn } from "@workspace/ui/lib/utils";
 
 interface ContactSectionProps {
   className?: string;

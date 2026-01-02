@@ -1,8 +1,8 @@
+import { cn } from "@workspace/ui/lib/utils";
 import { AvatarCard } from "@/components/avatar-card";
 import { IntroductionCard } from "@/components/introduction-card";
 import { sections, skillIcons } from "@/lib/site-config";
 import { shuffleArray } from "@/lib/utils";
-import { cn } from "@workspace/ui/lib/utils";
 
 interface HomeSectionProps {
   className?: string;

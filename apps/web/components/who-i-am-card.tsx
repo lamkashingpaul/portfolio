@@ -1,4 +1,3 @@
-import { whoIAm } from "@/lib/site-config";
 import {
   Card,
   CardContent,
@@ -8,6 +7,7 @@ import {
 import { Separator } from "@workspace/ui/components/separator";
 import { cn } from "@workspace/ui/lib/utils";
 import { Lightbulb } from "lucide-react";
+import { whoIAm } from "@/lib/site-config";
 
 interface WhoIAmCardProps {
   className?: string;
@@ -32,8 +32,8 @@ export const WhoIAmCard = (props: WhoIAmCardProps) => {
       </CardHeader>
       <CardContent>
         <div className="space-y-4 lg:space-y-6">
-          {whoIAm.map((item, i) => (
-            <p key={i} className="text-muted-foreground">
+          {whoIAm.map((item) => (
+            <p key={item} className="text-muted-foreground">
               {item}
             </p>
           ))}

@@ -1,7 +1,3 @@
-import { EducationCard } from "@/components/education-card";
-import { ExperienceCard } from "@/components/experience-card";
-import { SlideText } from "@/components/slide-text";
-import { educations, experiences } from "@/lib/site-config";
 import {
   Tabs,
   TabsContent,
@@ -9,6 +5,10 @@ import {
   TabsTrigger,
 } from "@workspace/ui/components/tabs";
 import { Briefcase, GraduationCap } from "lucide-react";
+import { EducationCard } from "@/components/education-card";
+import { ExperienceCard } from "@/components/experience-card";
+import { SlideText } from "@/components/slide-text";
+import { educations, experiences } from "@/lib/site-config";
 
 export const ExperienceTabs = () => {
   return (
@@ -26,17 +26,18 @@ export const ExperienceTabs = () => {
       <TabsContent value="experience">
         <SlideText>
           <div className="space-y-4 lg:space-y-6">
-            {experiences.map((experience, i) => (
-              <ExperienceCard key={i} {...experience} />
-            ))}
+            {experiences.map((experience) => {
+              const key = `${experience.title}-${experience.company}`;
+              return <ExperienceCard key={key} {...experience} />;
+            })}
           </div>
         </SlideText>
       </TabsContent>
       <TabsContent value="education">
         <SlideText>
           <div className="space-y-4 lg:space-y-6">
-            {educations.map((education, i) => (
-              <EducationCard key={i} {...education} />
+            {educations.map((education) => (
+              <EducationCard key={education.degree} {...education} />
             ))}
           </div>
         </SlideText>

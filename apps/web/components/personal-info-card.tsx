@@ -1,5 +1,3 @@
-import { OpenToWorkIndicator } from "@/components/open-to-work-indicator";
-import { personalInfo } from "@/lib/site-config";
 import {
   Card,
   CardContent,
@@ -9,6 +7,8 @@ import {
 import { Separator } from "@workspace/ui/components/separator";
 import { cn } from "@workspace/ui/lib/utils";
 import { User } from "lucide-react";
+import { OpenToWorkIndicator } from "@/components/open-to-work-indicator";
+import { personalInfo } from "@/lib/site-config";
 
 interface PersonalInfoCardProps {
   className?: string;

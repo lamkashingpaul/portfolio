@@ -1,13 +1,13 @@
-import { Icons } from "@/components/icons";
-import { ProjectTabs } from "@/components/project-tabs";
-import { RevealText } from "@/components/reveal-text";
-import { SlideText } from "@/components/slide-text";
-import { projects, sections, socialLinks } from "@/lib/site-config";
 import { Button } from "@workspace/ui/components/button";
 import { Separator } from "@workspace/ui/components/separator";
 import { cn } from "@workspace/ui/lib/utils";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { Icons } from "@/components/icons";
+import { ProjectTabs } from "@/components/project-tabs";
+import { RevealText } from "@/components/reveal-text";
+import { SlideText } from "@/components/slide-text";
+import { projects, sections, socialLinks } from "@/lib/site-config";
 
 interface ProjectsSectionProps {
   className?: string;

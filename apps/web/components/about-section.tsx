@@ -1,13 +1,13 @@
 "use client";
 
+import { Separator } from "@workspace/ui/components/separator";
+import { cn } from "@workspace/ui/lib/utils";
 import { ExperienceTabs } from "@/components/experience-tabs";
 import { PersonalInfoCard } from "@/components/personal-info-card";
 import { RevealText } from "@/components/reveal-text";
 import { SlideText } from "@/components/slide-text";
 import { WhoIAmCard } from "@/components/who-i-am-card";
 import { sections } from "@/lib/site-config";
-import { Separator } from "@workspace/ui/components/separator";
-import { cn } from "@workspace/ui/lib/utils";
 
 interface AboutSectionProps {
   className?: string;

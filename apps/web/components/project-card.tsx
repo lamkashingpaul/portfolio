@@ -1,5 +1,3 @@
-import { Icons } from "@/components/icons";
-import { SideProject } from "@/types";
 import { Badge } from "@workspace/ui/components/badge";
 import { Button } from "@workspace/ui/components/button";
 import {
@@ -12,6 +10,8 @@ import {
 import { Brain, ExternalLink } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { Icons } from "@/components/icons";
+import type { SideProject } from "@/types";
 
 type ProjectCardProps = {
   project: SideProject;

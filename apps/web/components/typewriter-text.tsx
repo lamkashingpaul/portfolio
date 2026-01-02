@@ -1,8 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { motion } from "motion/react";
 import { cn } from "@workspace/ui/lib/utils";
+import { motion } from "motion/react";
+import { useEffect, useState } from "react";
 
 interface TextTypingProps {
   className?: string;

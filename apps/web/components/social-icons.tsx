@@ -1,7 +1,7 @@
-import { Icons } from "@/components/icons";
-import { socialLinks } from "@/lib/site-config";
 import { Mail } from "lucide-react";
 import Link from "next/link";
+import { Icons } from "@/components/icons";
+import { socialLinks } from "@/lib/site-config";
 
 export const SocialIcons = () => {
   const { gitHub, linkedIn, email } = socialLinks;

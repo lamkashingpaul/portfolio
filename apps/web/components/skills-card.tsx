@@ -1,5 +1,3 @@
-import { SkillBadge } from "@/components/skill-badge";
-import { SkillCategory } from "@/types";
 import {
   Card,
   CardContent,
@@ -8,6 +6,8 @@ import {
 } from "@workspace/ui/components/card";
 import { Separator } from "@workspace/ui/components/separator";
 import { cn } from "@workspace/ui/lib/utils";
+import { SkillBadge } from "@/components/skill-badge";
+import type { SkillCategory } from "@/types";
 
 type SkillsCardProps = SkillCategory & {
   className?: string;
@@ -32,8 +32,12 @@ export const SkillsCard = (props: SkillsCardProps) => {
       </CardHeader>
       <CardContent>
         <div className="flex flex-wrap gap-2">
-          {skills.map((skill, i) => (
-            <SkillBadge className="rounded-full py-2" key={i} {...skill} />
+          {skills.map((skill) => (
+            <SkillBadge
+              className="rounded-full py-2"
+              key={skill.name}
+              {...skill}
+            />
           ))}
         </div>
       </CardContent>

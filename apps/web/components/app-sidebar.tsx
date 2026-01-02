@@ -1,4 +1,3 @@
-import { sections, titleOfSite } from "@/lib/site-config";
 import {
   Sidebar,
   SidebarContent,
@@ -9,6 +8,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@workspace/ui/components/sidebar";
+import { sections, titleOfSite } from "@/lib/site-config";
 
 export function AppSidebar() {
   return (

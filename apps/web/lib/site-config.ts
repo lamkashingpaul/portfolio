@@ -1,18 +1,23 @@
-import { Icons } from "@/components/icons";
-import { Education, Experience, SideProject, SkillCategory } from "@/types";
 import {
-  Home,
-  User,
-  Code,
-  Rocket,
-  Mail,
-  Database,
-  Server,
-  Globe,
-  Cloud,
   Braces,
+  Cloud,
+  Code,
+  Database,
   GitBranch,
+  Globe,
+  Home,
+  Mail,
+  Rocket,
+  Server,
+  User,
 } from "lucide-react";
+import { Icons } from "@/components/icons";
+import type {
+  Education,
+  Experience,
+  SideProject,
+  SkillCategory,
+} from "@/types";
 
 export const sections = {
   home: {

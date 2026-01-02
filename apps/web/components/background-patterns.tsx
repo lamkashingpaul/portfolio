@@ -7,7 +7,11 @@ interface PatternProps {
 export function DiagonalLines({ className }: PatternProps) {
   return (
     <div className={`absolute inset-0 -z-10 opacity-[0.03] ${className}`}>
-      <svg className="h-full w-full" xmlns="http://www.w3.org/2000/svg">
+      <svg
+        className="h-full w-full"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+      >
         <defs>
           <pattern
             id="diagonalLines"
@@ -43,7 +47,11 @@ export function DiagonalLines({ className }: PatternProps) {
 export function Dots({ className }: PatternProps) {
   return (
     <div className={`absolute inset-0 -z-10 opacity-[0.03] ${className}`}>
-      <svg className="h-full w-full" xmlns="http://www.w3.org/2000/svg">
+      <svg
+        className="h-full w-full"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+      >
         <defs>
           <pattern
             id="dots"
@@ -67,7 +75,11 @@ export function Dots({ className }: PatternProps) {
 export function Triangles({ className }: PatternProps) {
   return (
     <div className={`absolute inset-0 -z-10 opacity-[0.03] ${className}`}>
-      <svg className="h-full w-full" xmlns="http://www.w3.org/2000/svg">
+      <svg
+        className="h-full w-full"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+      >
         <defs>
           <pattern
             id="triangles"
@@ -104,7 +116,11 @@ export function Triangles({ className }: PatternProps) {
 export function Hexagons({ className }: PatternProps) {
   return (
     <div className={`absolute inset-0 -z-10 opacity-[0.03] ${className}`}>
-      <svg className="h-full w-full" xmlns="http://www.w3.org/2000/svg">
+      <svg
+        className="h-full w-full"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+      >
         <defs>
           <pattern
             id="hexagons"
@@ -135,7 +151,11 @@ export function Hexagons({ className }: PatternProps) {
 export function CircuitBoard({ className }: PatternProps) {
   return (
     <div className={`absolute inset-0 -z-10 opacity-[0.03] ${className}`}>
-      <svg className="h-full w-full" xmlns="http://www.w3.org/2000/svg">
+      <svg
+        className="h-full w-full"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+      >
         <defs>
           <pattern
             id="circuit"
@@ -169,7 +189,11 @@ export function CircuitBoard({ className }: PatternProps) {
 export function RedAccentWaves({ className }: PatternProps) {
   return (
     <div className={`absolute inset-0 -z-10 opacity-[0.03] ${className}`}>
-      <svg className="h-full w-full" xmlns="http://www.w3.org/2000/svg">
+      <svg
+        className="h-full w-full"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+      >
         <defs>
           <pattern
             id="waves"
@@ -200,7 +224,7 @@ export function RedAccentWaves({ className }: PatternProps) {
 export function SoftRedGradient({ className }: PatternProps) {
   return (
     <div className={`absolute inset-0 -z-10 ${className}`}>
-      <div className="absolute inset-0 bg-gradient-to-br from-white via-rose-50 to-gray-100 opacity-80 dark:from-gray-950 dark:via-rose-950/20 dark:to-gray-900"></div>
+      <div className="absolute inset-0 bg-linear-to-br from-white via-rose-50 to-gray-100 opacity-80 dark:from-gray-950 dark:via-rose-950/20 dark:to-gray-900"></div>
     </div>
   );
 }
@@ -208,7 +232,7 @@ export function SoftRedGradient({ className }: PatternProps) {
 export function DiagonalRedGradient({ className }: PatternProps) {
   return (
     <div className={`absolute inset-0 -z-10 ${className}`}>
-      <div className="absolute inset-0 bg-gradient-to-tr from-white via-red-50 to-orange-50 opacity-80 dark:from-gray-950 dark:via-red-950/10 dark:to-orange-950/10"></div>
+      <div className="absolute inset-0 bg-linear-to-tr from-white via-red-50 to-orange-50 opacity-80 dark:from-gray-950 dark:via-red-950/10 dark:to-orange-950/10"></div>
     </div>
   );
 }
@@ -220,8 +244,7 @@ export function RadialRedGradient({ className }: PatternProps) {
       <div className="radial-gradient absolute inset-0"></div>
       <style jsx>{`
         .radial-gradient {
-          background:
-            radial-gradient(
+          background: radial-gradient(
               circle at top right,
               rgba(239, 68, 68, 0.05),
               transparent 60%
@@ -234,8 +257,7 @@ export function RadialRedGradient({ className }: PatternProps) {
         }
         @media (prefers-color-scheme: dark) {
           .radial-gradient {
-            background:
-              radial-gradient(
+            background: radial-gradient(
                 circle at top right,
                 rgba(239, 68, 68, 0.08),
                 transparent 60%
@@ -260,17 +282,12 @@ export function MeshGradient({ className }: PatternProps) {
       <style jsx>{`
         .mesh-gradient {
           background-color: hsla(0, 0%, 100%, 1);
-          background-image:
-            radial-gradient(
+          background-image: radial-gradient(
               at 80% 0%,
               hsla(0, 100%, 96%, 1) 0px,
               transparent 50%
             ),
-            radial-gradient(
-              at 0% 50%,
-              hsla(0, 0%, 96%, 1) 0px,
-              transparent 50%
-            ),
+            radial-gradient(at 0% 50%, hsla(0, 0%, 96%, 1) 0px, transparent 50%),
             radial-gradient(
               at 80% 100%,
               hsla(0, 100%, 96%, 1) 0px,
@@ -280,8 +297,7 @@ export function MeshGradient({ className }: PatternProps) {
         @media (prefers-color-scheme: dark) {
           .mesh-gradient {
             background-color: hsla(0, 0%, 10%, 1);
-            background-image:
-              radial-gradient(
+            background-image: radial-gradient(
                 at 80% 0%,
                 hsla(0, 100%, 15%, 0.3) 0px,
                 transparent 50%
@@ -306,7 +322,7 @@ export function MeshGradient({ className }: PatternProps) {
 export function GradientWithNoise({ className }: PatternProps) {
   return (
     <div className={`absolute inset-0 -z-10 ${className}`}>
-      <div className="absolute inset-0 bg-gradient-to-b from-white to-gray-50 opacity-90 dark:from-gray-950 dark:to-gray-900"></div>
+      <div className="absolute inset-0 bg-linear-to-b from-white to-gray-50 opacity-90 dark:from-gray-950 dark:to-gray-900"></div>
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJhIiB4PSIwIiB5PSIwIj48ZmVUdXJidWxlbmNlIGJhc2VGcmVxdWVuY3k9Ii43NSIgc3RpdGNoVGlsZXM9InN0aXRjaCIgdHlwZT0iZnJhY3RhbE5vaXNlIi8+PGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPjwvZmlsdGVyPjxwYXRoIGQ9Ik0wIDBoMzAwdjMwMEgweiIgZmlsdGVyPSJ1cmwoI2EpIiBvcGFjaXR5PSIuMDUiLz48L3N2Zz4=')]"></div>
     </div>
   );
@@ -315,10 +331,11 @@ export function GradientWithNoise({ className }: PatternProps) {
 export function HexagonsWithGradient({ className }: PatternProps) {
   return (
     <div className={`absolute inset-0 -z-10 ${className}`}>
-      <div className="absolute inset-0 bg-gradient-to-tr from-white via-rose-50 to-gray-50 opacity-90 dark:from-gray-950 dark:via-rose-950/10 dark:to-gray-900"></div>
+      <div className="absolute inset-0 bg-linear-to-tr from-white via-rose-50 to-gray-50 opacity-90 dark:from-gray-950 dark:via-rose-950/10 dark:to-gray-900"></div>
       <svg
         className="h-full w-full opacity-[0.03]"
         xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
       >
         <defs>
           <pattern

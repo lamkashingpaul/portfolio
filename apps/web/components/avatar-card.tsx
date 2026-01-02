@@ -26,10 +26,11 @@ export const AvatarCard = (props: AvatarCardProps) => {
         style={{ maxHeight: 64 * m }}
       >
         {iconsGrid.map((iconsRow, i) => {
+          const key = `icons-row-${i}`;
           const speed = Math.floor(Math.random() * (50 - 30)) + 30;
           return (
             <IconsMarquee
-              key={i}
+              key={key}
               icons={iconsRow}
               speed={speed}
               direction={directions[i & 1]}

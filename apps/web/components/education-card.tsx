@@ -1,7 +1,7 @@
-import { Education } from "@/types";
 import { Badge } from "@workspace/ui/components/badge";
 import { Card, CardContent } from "@workspace/ui/components/card";
 import { cn } from "@workspace/ui/lib/utils";
+import type { Education } from "@/types";
 
 type EducationCardProps = Education & {
   className?: string;
@@ -27,8 +27,8 @@ export const EducationCard = (props: EducationCardProps) => {
         </div>
 
         <ul className="list-inside list-disc space-y-4">
-          {descriptions.map((description, index) => (
-            <li key={index} className="text-muted-foreground">
+          {descriptions.map((description) => (
+            <li key={description} className="text-muted-foreground">
               {description}
             </li>
           ))}

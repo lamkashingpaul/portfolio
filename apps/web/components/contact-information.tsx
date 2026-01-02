@@ -1,7 +1,7 @@
-import { Icons } from "@/components/icons";
-import { personalInfo, socialLinks } from "@/lib/site-config";
 import { cn } from "@workspace/ui/lib/utils";
 import { Mail, MapPin, Phone } from "lucide-react";
+import { Icons } from "@/components/icons";
+import { personalInfo, socialLinks } from "@/lib/site-config";
 
 interface ContactInformationProps {
   className?: string;

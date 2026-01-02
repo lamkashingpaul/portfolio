@@ -1,5 +1,3 @@
-import { ProjectGrid } from "@/components/project-grid";
-import { SideProject } from "@/types";
 import {
   Tabs,
   TabsContent,
@@ -7,6 +5,8 @@ import {
   TabsTrigger,
 } from "@workspace/ui/components/tabs";
 import { Brain } from "lucide-react";
+import { ProjectGrid } from "@/components/project-grid";
+import type { SideProject } from "@/types";
 
 type ProjectTabsProps = {
   projects: SideProject[];

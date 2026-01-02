@@ -1,7 +1,7 @@
+import { TrafficCone } from "lucide-react";
 import { ProjectCard } from "@/components/project-card";
 import { SlideText } from "@/components/slide-text";
-import { SideProject } from "@/types";
-import { TrafficCone } from "lucide-react";
+import type { SideProject } from "@/types";
 
 type ProjectGridProps = {
   projects: SideProject[];

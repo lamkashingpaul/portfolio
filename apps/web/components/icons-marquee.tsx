@@ -19,9 +19,9 @@ export const IconsMarquee = (props: IconsMarqueeProps) => {
       pauseOnHover
       className={cn("p-4", className)}
     >
-      {icons.map((Icon, index) => (
+      {icons.map((Icon) => (
         <div
-          key={index}
+          key={Icon.name}
           className="hover:scale-120 mx-2 rounded-full bg-white p-2 shadow-md transition-transform duration-200 ease-in-out"
         >
           <Icon className="size-8" />

@@ -1,9 +1,9 @@
 "use client";
 
+import Link from "next/link";
 import { Icons } from "@/components/icons";
 import { ModeToggle } from "@/components/mode-switcher";
 import { sections } from "@/lib/site-config";
-import Link from "next/link";
 
 export const SiteHeader = () => {
   const handleScrollToSection = (

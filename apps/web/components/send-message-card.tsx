@@ -2,13 +2,16 @@
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
+  Alert,
+  AlertDescription,
+  AlertTitle,
+} from "@workspace/ui/components/alert";
+import { ButtonWithLoading } from "@workspace/ui/components/button-with-loading";
+import {
   Card,
   CardContent,
   CardDescription,
 } from "@workspace/ui/components/card";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
-import { ButtonWithLoading } from "@workspace/ui/components/button-with-loading";
 import {
   Form,
   FormControl,
@@ -17,17 +20,14 @@ import {
   FormLabel,
   FormMessage,
 } from "@workspace/ui/components/form";
-import {
-  Alert,
-  AlertDescription,
-  AlertTitle,
-} from "@workspace/ui/components/alert";
 import { Input } from "@workspace/ui/components/input";
-import { Textarea } from "@workspace/ui/components/textarea";
-import { AlertCircle, SendIcon, TerminalIcon } from "lucide-react";
 import { Separator } from "@workspace/ui/components/separator";
-import { useSendMessage } from "@/hooks/use-send-message";
+import { Textarea } from "@workspace/ui/components/textarea";
 import { cn } from "@workspace/ui/lib/utils";
+import { AlertCircle, SendIcon, TerminalIcon } from "lucide-react";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { useSendMessage } from "@/hooks/use-send-message";
 
 const sendMessageFormSchema = z.object({
   name: z.string().trim().min(1, { error: "Name is required" }),

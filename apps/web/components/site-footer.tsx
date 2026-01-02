@@ -1,8 +1,8 @@
 "use client";
 
-import { personalInfo, socialLinks } from "@/lib/site-config";
 import { Button } from "@workspace/ui/components/button";
 import { ArrowUp } from "lucide-react";
+import { personalInfo, socialLinks } from "@/lib/site-config";
 
 export const SiteFooter = () => {
   const currentYear = new Date().getFullYear();
