@@ -9,5 +9,8 @@
     "TINI",
     "turbopack",
     "turborepo"
-  ]
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.biome": "explicit"
+  }
 }

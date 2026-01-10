@@ -1,9 +1,9 @@
 # base
 FROM node:25.2.1-slim AS base
+ENV NODE_ENV=production
 ENV CI=1
 ENV PNPM_HOME=/pnpm
 ENV PATH=$PNPM_HOME:$PATH
-ENV NODE_ENV=production
 RUN npm install -g pnpm
 RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install turbo@latest --global
 USER node
