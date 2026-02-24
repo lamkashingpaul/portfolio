@@ -7,7 +7,7 @@ import {
 import { Separator } from "@workspace/ui/components/separator";
 import { cn } from "@workspace/ui/lib/utils";
 import { SkillBadge } from "@/components/skill-badge";
-import type { SkillCategory } from "@/types";
+import type { SkillCategory } from "@/types/skill-category.type";
 
 type SkillsCardProps = SkillCategory & {
   className?: string;
@@ -25,7 +25,7 @@ export const SkillsCard = (props: SkillsCardProps) => {
     >
       <CardHeader>
         <CardTitle className="flex flex-row items-end justify-start gap-2 overflow-hidden">
-          <Icon className="text-primary size-6 md:size-8" />
+          <Icon className="size-6 text-primary md:size-8" />
           <div className="text-xl md:text-2xl">{title}</div>
         </CardTitle>
         <Separator />

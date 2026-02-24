@@ -31,7 +31,7 @@ export const SiteHeader = () => {
   };
 
   return (
-    <header className="bg-background/95 supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50 w-full border-b backdrop-blur">
+    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container-wrapper">
         <div className="container flex h-14 items-center justify-between gap-2 md:gap-4">
           <Link
@@ -49,7 +49,7 @@ export const SiteHeader = () => {
                 key={section.title}
                 href={section.href}
                 onClick={(e) => handleScrollToSection(e, section.href)}
-                className="hover:text-primary text-sm font-medium transition-colors"
+                className="font-medium text-sm transition-colors hover:text-primary"
               >
                 {section.title}
               </Link>

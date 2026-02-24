@@ -25,7 +25,7 @@ export const ProjectsSection = (props: ProjectsSectionProps) => {
         <div className="container py-4">
           <div className="flex flex-row justify-center">
             <RevealText coverClassName="bg-primary">
-              <h2 className="text-primary text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
+              <h2 className="font-bold text-3xl text-primary tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
                 Projects
               </h2>
             </RevealText>
@@ -36,7 +36,7 @@ export const ProjectsSection = (props: ProjectsSectionProps) => {
 
           <SlideText delay={0.2} direction="up">
             <div className="mt-8 flex flex-col items-center justify-center text-center">
-              <p className="text-muted-foreground mb-4">
+              <p className="mb-4 text-muted-foreground">
                 Want to see more of my work? Check out my GitHub profile for
                 additional projects and contributions.
               </p>

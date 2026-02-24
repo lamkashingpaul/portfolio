@@ -1,5 +1,5 @@
 import { Badge } from "@workspace/ui/components/badge";
-import type { Skill } from "@/types";
+import type { Skill } from "@/types/skill.type";
 
 type SkillBadgeProps = Skill & {
   className?: string;

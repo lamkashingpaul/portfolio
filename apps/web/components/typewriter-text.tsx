@@ -51,7 +51,7 @@ export const TypewriterText = (props: TextTypingProps) => {
 
   return (
     <h1 className={cn("text-2xl", className)}>
-      {staticText} <span className="text-primary font-bold">{text}</span>
+      {staticText} <span className="font-bold text-primary">{text}</span>
       <motion.span
         animate={{ opacity: Number(isCursorVisible) }}
         className={cn(cursorClassName)}

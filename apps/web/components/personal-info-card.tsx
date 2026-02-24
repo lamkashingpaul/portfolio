@@ -27,7 +27,7 @@ export const PersonalInfoCard = (props: PersonalInfoCardProps) => {
     >
       <CardHeader>
         <CardTitle className="flex flex-row items-end justify-start gap-2 overflow-hidden">
-          <User className="text-primary size-6 md:size-8" />
+          <User className="size-6 text-primary md:size-8" />
           <div className="text-xl md:text-2xl">Personal Info</div>
         </CardTitle>
         <Separator />
@@ -46,7 +46,7 @@ export const PersonalInfoCard = (props: PersonalInfoCardProps) => {
           </li>
           <li>
             <span className="font-bold">Email: </span>
-            <span className="text-muted-foreground break-all">{email}</span>
+            <span className="break-all text-muted-foreground">{email}</span>
           </li>
           <li>
             <span className="font-bold">Languages: </span>

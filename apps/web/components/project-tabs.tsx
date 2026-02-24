@@ -6,7 +6,7 @@ import {
 } from "@workspace/ui/components/tabs";
 import { Brain } from "lucide-react";
 import { ProjectGrid } from "@/components/project-grid";
-import type { SideProject } from "@/types";
+import type { SideProject } from "@/types/side-project.type";
 
 type ProjectTabsProps = {
   projects: SideProject[];
@@ -35,7 +35,7 @@ export const ProjectTabs = (props: ProjectTabsProps) => {
       <TabsContent value="ai">
         <div className="space-y-2">
           <div className="text-center">
-            <div className="bg-primary/10 text-primary inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium">
+            <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 font-medium text-primary text-sm">
               Artificial Intelligence & Machine Learning Projects
             </div>
           </div>

@@ -24,7 +24,7 @@ export const SkillsSection = (props: SkillsSectionProps) => {
         <div className="container py-4">
           <div className="flex flex-row justify-center">
             <RevealText coverClassName="bg-primary">
-              <h2 className="text-primary text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
+              <h2 className="font-bold text-3xl text-primary tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
                 Skills
               </h2>
             </RevealText>
@@ -42,11 +42,11 @@ export const SkillsSection = (props: SkillsSectionProps) => {
 
             <SlideText>
               <div className="flex flex-col items-center justify-center gap-2 text-center">
-                <div className="bg-secondary rounded-full p-2 shadow-md">
+                <div className="rounded-full bg-secondary p-2 shadow-md">
                   <Code />
                 </div>
-                <h3 className="text-xl font-medium">Always Learning</h3>
-                <p className="text-muted-foreground max-w-100 lg:max-w-150">
+                <h3 className="font-medium text-xl">Always Learning</h3>
+                <p className="max-w-100 text-muted-foreground lg:max-w-150">
                   I&rsquo;m constantly expanding my skill set and staying
                   up-to-date with the latest technologies and best practices in
                   software development.

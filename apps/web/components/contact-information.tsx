@@ -13,7 +13,7 @@ export const ContactInformation = (props: ContactInformationProps) => {
   return (
     <div className={cn("space-y-8", className)}>
       <div className="space-y-6">
-        <h3 className="text-xl font-medium">Contact Information</h3>
+        <h3 className="font-medium text-xl">Contact Information</h3>
         <p className="text-muted-foreground">
           Feel free to reach out through the contact form or directly via email
           or phone. I&rsquo;m always open to discussing new projects, creative
@@ -22,14 +22,14 @@ export const ContactInformation = (props: ContactInformationProps) => {
 
         <div className="space-y-4">
           <div className="flex items-start gap-4">
-            <div className="bg-primary/10 rounded-full p-2">
-              <Mail className="text-primary size-5" />
+            <div className="rounded-full bg-primary/10 p-2">
+              <Mail className="size-5 text-primary" />
             </div>
             <div>
               <h4 className="font-medium">Email</h4>
               <a
                 href={socialLinks.email}
-                className="text-muted-foreground hover:text-primary transition-colors"
+                className="text-muted-foreground transition-colors hover:text-primary"
               >
                 {personalInfo.email}
               </a>
@@ -37,14 +37,14 @@ export const ContactInformation = (props: ContactInformationProps) => {
           </div>
 
           <div className="flex items-start gap-4">
-            <div className="bg-primary/10 rounded-full p-2">
-              <Phone className="text-primary size-5" />
+            <div className="rounded-full bg-primary/10 p-2">
+              <Phone className="size-5 text-primary" />
             </div>
             <div>
               <h4 className="font-medium">Phone</h4>
               <a
                 href={socialLinks.phone}
-                className="text-muted-foreground hover:text-primary transition-colors"
+                className="text-muted-foreground transition-colors hover:text-primary"
               >
                 {personalInfo.phone}
               </a>
@@ -52,8 +52,8 @@ export const ContactInformation = (props: ContactInformationProps) => {
           </div>
 
           <div className="flex items-start gap-4">
-            <div className="bg-primary/10 rounded-full p-2">
-              <MapPin className="text-primary size-5" />
+            <div className="rounded-full bg-primary/10 p-2">
+              <MapPin className="size-5 text-primary" />
             </div>
             <div>
               <h4 className="font-medium">Location</h4>
@@ -64,25 +64,25 @@ export const ContactInformation = (props: ContactInformationProps) => {
       </div>
 
       <div className="space-y-4">
-        <h3 className="text-xl font-medium">Connect With Me</h3>
+        <h3 className="font-medium text-xl">Connect With Me</h3>
         <div className="flex gap-4">
           <a
             href={socialLinks.linkedIn}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-muted hover:bg-primary/10 rounded-full p-3 transition-colors"
+            className="rounded-full bg-muted p-3 transition-colors hover:bg-primary/10"
             aria-label="LinkedIn"
           >
-            <Icons.linkedIn className="text-primary size-5" />
+            <Icons.linkedIn className="size-5 text-primary" />
           </a>
           <a
             href={socialLinks.gitHub}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-muted hover:bg-primary/10 rounded-full p-3 transition-colors"
+            className="rounded-full bg-muted p-3 transition-colors hover:bg-primary/10"
             aria-label="GitHub"
           >
-            <Icons.gitHub className="text-primary size-5" />
+            <Icons.gitHub className="size-5 text-primary" />
           </a>
         </div>
       </div>

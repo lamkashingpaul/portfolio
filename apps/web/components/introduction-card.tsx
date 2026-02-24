@@ -17,7 +17,7 @@ export const IntroductionCard = (props: IntroductionCardProps) => {
     <div className={cn("flex flex-col justify-center gap-4", className)}>
       <div className="space-y-2">
         <RevealText coverClassName="bg-primary">
-          <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
+          <h1 className="font-bold text-3xl tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
             {"Hi, this is "}
             <span className="text-primary">{personalInfo.name}</span>
           </h1>
@@ -32,14 +32,14 @@ export const IntroductionCard = (props: IntroductionCardProps) => {
         </RevealText>
 
         <RevealText coverClassName="bg-muted-foreground">
-          <p className="text-muted-foreground max-w-150 text-xl md:text-2xl">
+          <p className="max-w-150 text-muted-foreground text-xl md:text-2xl">
             {personalInfo.summary}
           </p>
         </RevealText>
 
         <RevealText coverClassName="bg-muted-foreground">
           {personalInfo.introductions.map((item) => (
-            <p key={item} className="text-muted-foreground max-w-150 pt-4">
+            <p key={item} className="max-w-150 pt-4 text-muted-foreground">
               {item}
             </p>
           ))}

@@ -25,7 +25,7 @@ export const WhoIAmCard = (props: WhoIAmCardProps) => {
     >
       <CardHeader>
         <CardTitle className="flex flex-row items-end justify-start gap-2 overflow-hidden">
-          <Lightbulb className="text-primary size-6 md:size-8" />
+          <Lightbulb className="size-6 text-primary md:size-8" />
           <div className="text-xl md:text-2xl">Who I Am</div>
         </CardTitle>
         <Separator />

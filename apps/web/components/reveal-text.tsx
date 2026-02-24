@@ -21,7 +21,7 @@ export const RevealText = (props: TextRevealProps) => {
           viewport={{ once: true }}
           transition={{ duration: 0.4, ease: "easeInOut" }}
           className={cn(
-            "bg-foreground absolute z-10 h-full w-full",
+            "absolute z-10 h-full w-full bg-foreground",
             coverClassName,
           )}
         />

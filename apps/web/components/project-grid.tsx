@@ -1,7 +1,7 @@
 import { TrafficCone } from "lucide-react";
 import { ProjectCard } from "@/components/project-card";
 import { SlideText } from "@/components/slide-text";
-import type { SideProject } from "@/types";
+import type { SideProject } from "@/types/side-project.type";
 
 type ProjectGridProps = {
   projects: SideProject[];
@@ -34,11 +34,11 @@ const NoProjectsPlaceholder = () => {
   return (
     <SlideText>
       <div className="flex flex-col items-center justify-center gap-2 text-center">
-        <div className="bg-secondary rounded-full p-2 shadow-md">
+        <div className="rounded-full bg-secondary p-2 shadow-md">
           <TrafficCone />
         </div>
-        <h3 className="text-xl font-medium">Coming Soon</h3>
-        <p className="text-muted-foreground max-w-[400px] lg:max-w-[600px]">
+        <h3 className="font-medium text-xl">Coming Soon</h3>
+        <p className="max-w-[400px] text-muted-foreground lg:max-w-[600px]">
           I have developed several exciting projects locally and am currently
           working on deploying them online. Stay tuned for updates as I bring
           these creations to life!

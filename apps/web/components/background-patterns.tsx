@@ -368,7 +368,7 @@ export function RedGlowGradient({ className }: PatternProps) {
   return (
     <div className={`absolute inset-0 -z-10 overflow-hidden ${className}`}>
       <div className="absolute inset-0 bg-white dark:bg-gray-950"></div>
-      <div className="absolute -right-[10%] -top-[40%] h-[80%] w-[50%] rounded-full bg-red-500/5 blur-[100px]"></div>
+      <div className="absolute -top-[40%] -right-[10%] h-[80%] w-[50%] rounded-full bg-red-500/5 blur-[100px]"></div>
       <div className="absolute -bottom-[30%] -left-[10%] h-[80%] w-[50%] rounded-full bg-red-500/5 blur-[100px]"></div>
     </div>
   );

@@ -28,13 +28,13 @@ export const SiteFooter = () => {
               <ArrowUp className="h-5 w-5" />
             </Button>
 
-            <div className="text-muted-foreground text-balance text-center text-sm leading-loose md:text-left">
+            <div className="text-balance text-center text-muted-foreground text-sm leading-loose md:text-left">
               {`© ${currentYear} `}
               <a
                 href={socialLinks.linkedIn}
                 target="_blank"
                 rel="noreferrer"
-                className="hover:text-primary font-medium underline underline-offset-4 transition-colors"
+                className="font-medium underline underline-offset-4 transition-colors hover:text-primary"
               >
                 {` ${personalInfo.name} `}
               </a>
@@ -43,7 +43,7 @@ export const SiteFooter = () => {
                 href={`${socialLinks.gitHub}/portfolio`}
                 target="_blank"
                 rel="noreferrer"
-                className="hover:text-primary font-medium underline underline-offset-4 transition-colors"
+                className="font-medium underline underline-offset-4 transition-colors hover:text-primary"
               >
                 GitHub
               </a>

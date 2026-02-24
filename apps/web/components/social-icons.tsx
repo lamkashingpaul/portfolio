@@ -12,7 +12,7 @@ export const SocialIcons = () => {
         href={gitHub}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-muted-foreground hover:text-primary transition-colors"
+        className="text-muted-foreground transition-colors hover:text-primary"
       >
         <Icons.gitHub className="h-6 w-6" />
         <span className="sr-only">GitHub</span>
@@ -21,14 +21,14 @@ export const SocialIcons = () => {
         href={linkedIn}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-muted-foreground hover:text-primary transition-colors"
+        className="text-muted-foreground transition-colors hover:text-primary"
       >
         <Icons.linkedIn className="h-6 w-6" />
         <span className="sr-only">LinkedIn</span>
       </Link>
       <Link
         href={email}
-        className="text-muted-foreground hover:text-primary transition-colors"
+        className="text-muted-foreground transition-colors hover:text-primary"
       >
         <Mail className="h-6 w-6" />
         <span className="sr-only">Email</span>

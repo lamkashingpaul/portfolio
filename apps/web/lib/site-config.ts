@@ -12,12 +12,10 @@ import {
   User,
 } from "lucide-react";
 import { Icons } from "@/components/icons";
-import type {
-  Education,
-  Experience,
-  SideProject,
-  SkillCategory,
-} from "@/types";
+import type { Education } from "@/types/education.type";
+import type { Experience } from "@/types/experience.type";
+import type { SideProject } from "@/types/side-project.type";
+import type { SkillCategory } from "@/types/skill-category.type";
 
 export const sections = {
   home: {

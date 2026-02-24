@@ -1,7 +1,7 @@
 import { Badge } from "@workspace/ui/components/badge";
 import { Card, CardContent } from "@workspace/ui/components/card";
 import { cn } from "@workspace/ui/lib/utils";
-import type { Experience } from "@/types";
+import type { Experience } from "@/types/experience.type";
 
 type ExperienceCardProps = Experience & {
   className?: string;

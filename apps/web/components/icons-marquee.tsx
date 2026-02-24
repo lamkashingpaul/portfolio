@@ -22,7 +22,7 @@ export const IconsMarquee = (props: IconsMarqueeProps) => {
       {icons.map((Icon) => (
         <div
           key={Icon.name}
-          className="hover:scale-120 mx-2 rounded-full bg-white p-2 shadow-md transition-transform duration-200 ease-in-out"
+          className="mx-2 rounded-full bg-white p-2 shadow-md transition-transform duration-200 ease-in-out hover:scale-120"
         >
           <Icon className="size-8" />
         </div>

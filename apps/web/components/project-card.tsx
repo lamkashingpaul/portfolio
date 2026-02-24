@@ -11,7 +11,7 @@ import { Brain, ExternalLink } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Icons } from "@/components/icons";
-import type { SideProject } from "@/types";
+import type { SideProject } from "@/types/side-project.type";
 
 type ProjectCardProps = {
   project: SideProject;
@@ -37,15 +37,15 @@ export const ProjectCard = (props: ProjectCardProps) => {
           alt={title}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          className="hover:scale-120 scale-110 object-cover transition-transform duration-300"
+          className="scale-110 object-cover transition-transform duration-300 hover:scale-120"
         />
         {featured && (
-          <div className="absolute right-2 top-2">
+          <div className="absolute top-2 right-2">
             <Badge className="bg-primary hover:bg-primary">Featured</Badge>
           </div>
         )}
         {category === "ai" && (
-          <div className="absolute left-2 top-2">
+          <div className="absolute top-2 left-2">
             <Badge
               variant="secondary"
               className="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200"
@@ -60,7 +60,7 @@ export const ProjectCard = (props: ProjectCardProps) => {
         <CardTitle>{title}</CardTitle>
       </CardHeader>
       <CardContent className="flex-grow">
-        <p className="text-muted-foreground mb-4">{description}</p>
+        <p className="mb-4 text-muted-foreground">{description}</p>
         <div className="mt-2 flex flex-wrap gap-2">
           {technologies.map((tech) => (
             <Badge key={tech} variant="outline" className="text-xs">

@@ -21,7 +21,7 @@ export const AboutSection = (props: AboutSectionProps) => {
         <div className="container py-4">
           <div className="flex flex-row justify-center">
             <RevealText coverClassName="bg-primary">
-              <h2 className="text-primary text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
+              <h2 className="font-bold text-3xl text-primary tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
                 About Me
               </h2>
             </RevealText>
