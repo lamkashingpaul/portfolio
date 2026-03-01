@@ -4,7 +4,7 @@ import {
   TabsList,
   TabsTrigger,
 } from "@workspace/ui/components/tabs";
-import { Brain } from "lucide-react";
+import { Blocks, Brain } from "lucide-react";
 import { ProjectGrid } from "@/components/project-grid";
 import type { SideProject } from "@/types/side-project.type";
 
@@ -19,6 +19,10 @@ export const ProjectTabs = (props: ProjectTabsProps) => {
     <Tabs defaultValue="all">
       <TabsList className="flex h-auto w-full flex-wrap items-center justify-center gap-2">
         <TabsTrigger value="all">All</TabsTrigger>
+        <TabsTrigger value="web3" className="flex items-center gap-1">
+          <Blocks className="text-primary" />
+          Web3 & Blockchain
+        </TabsTrigger>
         <TabsTrigger value="ai" className="flex items-center gap-1">
           <Brain className="text-primary" />
           AI/ML
@@ -30,6 +34,19 @@ export const ProjectTabs = (props: ProjectTabsProps) => {
       </TabsList>
       <TabsContent value="all">
         <ProjectGrid projects={projects} />
+      </TabsContent>
+
+      <TabsContent value="web3">
+        <div className="space-y-2">
+          <div className="text-center">
+            <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 font-medium text-primary text-sm">
+              Web3 & Blockchain Projects
+            </div>
+          </div>
+          <ProjectGrid
+            projects={projects.filter((project) => project.category === "web3")}
+          />
+        </div>
       </TabsContent>
 
       <TabsContent value="ai">

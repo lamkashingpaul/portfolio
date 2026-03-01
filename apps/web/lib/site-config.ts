@@ -1,4 +1,5 @@
 import {
+  Blocks,
   Braces,
   Cloud,
   Code,
@@ -143,6 +144,10 @@ export const skillIcons = [
   Icons.redis,
   Icons.java,
   Icons.springBoot,
+  Icons.solidity,
+  Icons.ethers,
+  Icons.ethereum,
+  Icons.wagmi,
 ];
 
 export const skillCategories: SkillCategory[] = [
@@ -212,9 +217,37 @@ export const skillCategories: SkillCategory[] = [
       { name: "Azure", level: "beginner" },
     ],
   },
+  {
+    title: "Web3 & Blockchain",
+    icon: Blocks,
+    skills: [
+      { name: "Solidity", level: "intermediate" },
+      { name: "Hardhat", level: "intermediate" },
+      { name: "Ethers.js", level: "beginner" },
+      { name: "Viem", level: "beginner" },
+      { name: "Wagmi", level: "beginner" },
+    ],
+  },
 ];
 
 export const projects: SideProject[] = [
+  {
+    id: "3",
+    title: "Crypto Lotto",
+    description: `A decentralized lottery application built on the Ethereum blockchain, allowing users to participate in a provably fair lottery system using cryptocurrency.`,
+    image: "/crypto-lotto.png",
+    demoUrl: "https://crypto-lotto.paullam.dev",
+    githubUrl: "https://github.com/lamkashingpaul/lottery-smart-contract",
+    category: "web3",
+    technologies: [
+      "Solidity",
+      "React",
+      "Vime",
+      "Wagmi",
+      "Hardhat",
+      "Ethers.js",
+    ],
+  },
   {
     id: "2",
     title: "Summarize",

@@ -7,7 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@workspace/ui/components/card";
-import { Brain, ExternalLink } from "lucide-react";
+import { Blocks, Brain, ExternalLink } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Icons } from "@/components/icons";
@@ -44,6 +44,17 @@ export const ProjectCard = (props: ProjectCardProps) => {
             <Badge className="bg-primary hover:bg-primary">Featured</Badge>
           </div>
         )}
+        {category === "web3" && (
+          <div className="absolute top-2 left-2">
+            <Badge
+              variant="secondary"
+              className="bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200"
+            >
+              <Blocks className="mr-1 h-3 w-3" />
+              Web3
+            </Badge>
+          </div>
+        )}
         {category === "ai" && (
           <div className="absolute top-2 left-2">
             <Badge
@@ -59,7 +70,7 @@ export const ProjectCard = (props: ProjectCardProps) => {
       <CardHeader>
         <CardTitle>{title}</CardTitle>
       </CardHeader>
-      <CardContent className="flex-grow">
+      <CardContent className="grow">
         <p className="mb-4 text-muted-foreground">{description}</p>
         <div className="mt-2 flex flex-wrap gap-2">
           {technologies.map((tech) => (
