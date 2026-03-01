@@ -8,6 +8,7 @@ export const Icons = {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
+      <title>logo</title>
       <g transform="matrix(0.17142858,0,0,0.17142858,-18,0.78929817)">
         <g
           transform="matrix(1.560758,0,0,1.560758,97.040132,-13.890749)"
@@ -25,6 +26,7 @@ export const Icons = {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
+      <title>name</title>
       <defs>
         <linearGradient id="linear-gradient">
           <stop stopColor="#7d141d" offset="0" id="stop1" />
