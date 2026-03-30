@@ -76,7 +76,7 @@ export const socialLinks = {
   gitHub: "https://github.com/lamkashingpaul",
   linkedIn: "https://www.linkedin.com/in/lamkashingpaul/",
   email: `mailto:${email}`,
-  resume: `https://docs.google.com/document/d/1T6Ck2ts0jrGZU3gdAdKysChXcP_QmiNQ/edit?tab=t.0`,
+  resume: `https://drive.google.com/file/d/1tr177jUHbVIi_Fw_7L9k1cylQRtcV6HC/view`,
   phone: `tel:+${phone.replace(/\D/g, "")}`,
 };
 

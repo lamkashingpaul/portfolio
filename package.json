@@ -11,21 +11,14 @@
     "prepare": "node .husky/install.mjs"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.4.4",
+    "@biomejs/biome": "^2.4.9",
     "@workspace/typescript-config": "workspace:*",
     "husky": "^9.1.7",
-    "turbo": "^2.8.12",
-    "typescript": "^5.9.3"
+    "turbo": "^2.8.21",
+    "typescript": "^6.0.2"
   },
-  "packageManager": "pnpm@10.30.2",
+  "packageManager": "pnpm@10.33.0",
   "engines": {
-    "node": ">=25"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "@tailwindcss/oxide",
-      "core-js-pure",
-      "sharp"
-    ]
+    "node": ">=24"
   }
 }
