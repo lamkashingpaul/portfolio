@@ -1,11 +1,11 @@
 # base
-FROM node:24.14.0-slim AS base
+FROM node:24.16.0-slim AS base
 ENV NODE_ENV=production
 ENV CI=1
 ENV PNPM_HOME=/pnpm
-ENV PATH=$PNPM_HOME:$PATH
+ENV PATH=$PNPM_HOME/bin:$PATH
 RUN corepack enable
-RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install turbo@latest --global
+RUN --mount=type=cache,id=pnpm,target=/root/.local/share/pnpm/store pnpm install turbo@latest --global
 USER node
 WORKDIR /home/node/app
 
