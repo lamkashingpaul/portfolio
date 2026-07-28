@@ -1,5 +1,5 @@
 # base
-FROM node:24.16.0-slim AS base
+FROM node:24.18.0-slim AS base
 ENV NODE_ENV=production
 ENV CI=1
 ENV PNPM_HOME=/pnpm
