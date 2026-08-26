@@ -11,13 +11,13 @@
     "prepare": "node .husky/install.mjs"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.5.5",
+    "@biomejs/biome": "^2.5.10",
     "@workspace/typescript-config": "workspace:*",
     "husky": "^9.1.7",
-    "turbo": "^2.10.7",
+    "turbo": "^2.10.11",
     "typescript": "^7.0.2"
   },
-  "packageManager": "pnpm@11.17.0",
+  "packageManager": "pnpm@11.23.0",
   "engines": {
     "node": ">=24"
   }
